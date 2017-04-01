@@ -1,4 +1,4 @@
-package hr_rookierank_2;
+package competitions.hr_rookierank_2;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -43,8 +43,7 @@ public class ChessMoves {
 	public static int check(int i, int j, int n) {
 		int counter = 0;
 		n--;
-		int[][] list = new int[][] { { +1, +1 }, { +1, -1 }, { -1, +1 },
-				{ -1, -1 } };
+		int[][] list = new int[][] { { +1, +1 }, { +1, -1 }, { -1, +1 }, { -1, -1 } };
 
 		List<String> alist = new ArrayList<String>();
 		StringBuilder strb1 = new StringBuilder();
@@ -67,8 +66,7 @@ public class ChessMoves {
 				if (p == 0 && q == 0) {
 					alist.add(strb1.toString());
 					return ++counter;
-				} else if (p < 0 || q < 0 || p > n || q > n
-						|| alist.contains(strb1.toString())) {
+				} else if (p < 0 || q < 0 || p > n || q > n || alist.contains(strb1.toString())) {
 					continue;
 				} else {
 					int tempa, tempb;

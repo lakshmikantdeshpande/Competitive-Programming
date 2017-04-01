@@ -1,4 +1,3 @@
-package adhoc;
 
 // Kangaroo program HackerRank
 import java.util.Scanner;

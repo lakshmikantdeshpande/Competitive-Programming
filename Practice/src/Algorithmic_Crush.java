@@ -1,5 +1,3 @@
-package arrays;
-
 import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
@@ -10,29 +8,26 @@ public class Algorithmic_Crush {
 	static PrintWriter out = new PrintWriter(System.out);
 
 	public static void main(String args[]) throws Exception {
-		scanner.nextLong();
+		long N = scanner.nextLong();
 		long Q = scanner.nextLong();
-		long temp = 0;
 
-		long max = Long.MIN_VALUE;
 		Map<Long, Long> map = new HashMap<Long, Long>();
+		long p = 0;
+		long max = 0;
 
 		for (long i = 0; i < Q; i++) {
 			long a = scanner.nextLong();
 			long b = scanner.nextLong();
 			long k = scanner.nextLong();
+			map.put(a, map.get(a) == null ? k : map.get(a) + k);
+			if (b + 1 <= N)
+				map.put(b + 1, map.get(b + 1) == null ? 0 - k : map.get(b + 1) - k);
 
-			for (long c = a; c <= b; c++) {
-				if (map.containsKey(c)) {
-					temp = map.get(c) + k;
-					map.put(c, temp);
-				} else {
-					temp = k;
-					map.put(c, k);
-				}
-				if (temp > max)
-					max = temp;
-			}
+		}
+
+		for (long i = 1; i <= N; i++) {
+			p = (map.get(i) == null ? p : p + map.get(i));
+			max = Math.max(p, max);
 		}
 		out.println(max);
 
@@ -40,7 +35,6 @@ public class Algorithmic_Crush {
 		out = null;
 		scanner.close();
 		scanner = null;
-		map = null;
 		System.gc();
 	}
 }

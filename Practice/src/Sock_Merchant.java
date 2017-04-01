@@ -1,5 +1,3 @@
-package adhoc;
-
 import java.io.PrintStream;
 import java.util.HashMap;
 import java.util.Map;

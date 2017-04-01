@@ -1,5 +1,3 @@
-package adhoc;
-
 import java.util.Scanner;
 
 public class Hourglass {
@@ -16,9 +14,8 @@ public class Hourglass {
 		int max = 0;
 		for (int i = 0; i < 4; i++) {
 			for (int j = 0; j < 4; j++) {
-				int temp = arr[i][j] + arr[i + 1][j] + arr[i + 2][j]
-						+ arr[i + 1][j + 1] + arr[i][j + 2] + arr[i + 1][j + 2]
-						+ arr[i + 2][j + 2];
+				int temp = arr[i][j] + arr[i + 1][j] + arr[i + 2][j] + arr[i + 1][j + 1] + arr[i][j + 2]
+						+ arr[i + 1][j + 2] + arr[i + 2][j + 2];
 				if (temp > max)
 					max = temp;
 			}

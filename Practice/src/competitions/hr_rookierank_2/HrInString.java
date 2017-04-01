@@ -1,4 +1,4 @@
-package hr_rookierank_2;
+package competitions.hr_rookierank_2;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -9,8 +9,7 @@ public class HrInString {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int n = Integer.parseInt(br.readLine());
 		StringBuilder strb = new StringBuilder();
-		char[] array = new char[] { 'h', 'a', 'c', 'k', 'e', 'r', 'r', 'a',
-				'n', 'k' };
+		char[] array = new char[] { 'h', 'a', 'c', 'k', 'e', 'r', 'r', 'a', 'n', 'k' };
 		for (int i = 0; i < n; i++) {
 			String string = br.readLine();
 			int p = 0;

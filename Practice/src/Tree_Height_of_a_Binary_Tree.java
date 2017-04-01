@@ -1,5 +1,3 @@
-package adhoc;
-
 import java.util.Scanner;
 
 class Node {

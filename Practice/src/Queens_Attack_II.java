@@ -1,5 +1,3 @@
-package adhoc;
-
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
@@ -83,8 +81,7 @@ public class Queens_Attack_II {
 		while (true) {
 			tempx += dirx;
 			tempy += diry;
-			if (tempx < 1 || tempy < 1 || tempx > n || tempy > n
-					|| set.contains(tempx + " " + tempy)) {
+			if (tempx < 1 || tempy < 1 || tempx > n || tempy > n || set.contains(tempx + " " + tempy)) {
 				break;
 			} else {
 				count++;

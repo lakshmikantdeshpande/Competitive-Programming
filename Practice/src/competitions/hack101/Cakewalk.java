@@ -1,4 +1,4 @@
-package hack101;
+package competitions.hack101;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
