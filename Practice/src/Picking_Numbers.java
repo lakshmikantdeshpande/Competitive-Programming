@@ -9,21 +9,25 @@ public class Picking_Numbers {
 	public static void main(String args[]) throws Exception {
 		int N = scanner.nextInt();
 		int[] array = new int[N];
+		int[] hash = new int[100];
 
-		int j = 0;
-		while (j < N) {
-			array[j++] = scanner.nextInt();
+		Arrays.fill(hash, 0);
+
+		for (int i = 0; i < N; i++) {
+			array[i] = scanner.nextInt();
+			hash[array[i]]++;
 		}
 
-		Arrays.sort(array);
-		int p = 0;
-		for (int i = 0; i < N - 1; i++)
-			if (Math.abs(array[i] - array[i + 1]) <= 1)
-				p++;
+		for (int i = 0; i < 99; i++)
+			hash[i] += hash[i + 1];
 
-		out.println(p);
+		Arrays.sort(hash);
+
+		array = null;
+		out.println(hash[99]);
 		out.close();
 		out = null;
+		hash = null;
 		scanner.close();
 		scanner = null;
 		System.gc();
