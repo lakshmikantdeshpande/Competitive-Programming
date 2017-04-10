@@ -1,4 +1,4 @@
-package competitions.hr_week_of_code_30;
+package competitions.week_of_code_30;
 
 import java.util.Scanner;
 

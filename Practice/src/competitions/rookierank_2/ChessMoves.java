@@ -1,4 +1,4 @@
-package competitions.hr_rookierank_2;
+package competitions.rookierank_2;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
