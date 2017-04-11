@@ -5,10 +5,10 @@ import java.util.Scanner;
 
 public class TemplateAndTodoz {
 
-	static Scanner scanner = new Scanner(System.in);
-	static PrintWriter pw = new PrintWriter(System.out);
-
 	public static void main(String args[]) throws Exception {
+		Scanner scanner = new Scanner(System.in);
+		PrintWriter pw = new PrintWriter(System.out);
+
 		int N = scanner.nextInt();
 
 		pw.close();
