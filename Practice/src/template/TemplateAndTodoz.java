@@ -18,3 +18,13 @@ public class TemplateAndTodoz {
 		System.gc();
 	}
 }
+
+/*
+	TODOs:
+	(Wrong / partially correct codes)
+
+	Game of two stacks
+	Non Divisible Subset
+	Walking Robots
+	Visiting Manhattan
+ */
