@@ -1,15 +1,22 @@
-package template;
+// Day 7
+package thirtyDaysOfCode;
 
 import java.io.PrintWriter;
 import java.util.Scanner;
+import java.util.Stack;
 
-public class TemplateAndTodoz {
+public class Arrays {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);
         PrintWriter pw = new PrintWriter(System.out);
+        Stack<Integer> stack = new Stack<>();
 
         int N = scanner.nextInt();
+        while (N-- > 0)
+            stack.push(scanner.nextInt());
+        while (!stack.isEmpty())
+            pw.print(stack.pop() + " ");
 
         pw.close();
         pw = null;
@@ -18,15 +25,3 @@ public class TemplateAndTodoz {
         System.gc();
     }
 }
-
-/*
-    TODOs:
-	(Wrong / partially correct codes)
-
-	Maximal AND Subsequences
-	Game of two stacks
-	Non Divisible Subset
-	Walking Robots
-	Visiting Manhattan
-	Largest Rectangle
- */
