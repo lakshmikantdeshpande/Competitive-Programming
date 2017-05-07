@@ -12,7 +12,7 @@ public class Recursion {
 
         int N = scanner.nextInt();
         pw.println(factorial(N));
-        
+
         pw.close();
         pw = null;
         scanner.close();

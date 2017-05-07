@@ -2,20 +2,20 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 public class Drawing_Book {
-	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-	public static void main(String args[]) throws Exception {
-		int N = Integer.parseInt(br.readLine());
-		int pages = Integer.parseInt(br.readLine());
+    public static void main(String args[]) throws Exception {
+        int N = Integer.parseInt(br.readLine());
+        int pages = Integer.parseInt(br.readLine());
 
-		int front = pages / 2;
-		int back = N % 2 == 0 ? ((N + 1) - pages) / 2 : (N - pages) / 2;
-		System.out.println(front < back ? front : back);
+        int front = pages / 2;
+        int back = N % 2 == 0 ? ((N + 1) - pages) / 2 : (N - pages) / 2;
+        System.out.println(front < back ? front : back);
 
-		br.close();
-		br = null;
-		System.gc();
-	}
+        br.close();
+        br = null;
+        System.gc();
+    }
 }
 
 // Logic

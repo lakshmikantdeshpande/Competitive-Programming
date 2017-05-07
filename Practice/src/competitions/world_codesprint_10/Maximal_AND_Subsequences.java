@@ -1,4 +1,4 @@
-package competitions.World_Codesprint_10;
+package competitions.world_codesprint_10;
 
 import java.io.PrintWriter;
 import java.util.*;
@@ -26,7 +26,7 @@ public class Maximal_AND_Subsequences {
             count++;
 
         pw.println(max);
-        long temp = (long)(count % (Math.pow(10, 9) + 7));
+        long temp = (long) (count % (Math.pow(10, 9) + 7));
         temp = size % 2 == 0 ? temp / size : (temp / size) - 1;
         pw.println(temp);
         priorityQueue = null;
@@ -49,7 +49,7 @@ public class Maximal_AND_Subsequences {
             for (int i = 0; i < list.size(); i++) {
                 long removed = list.remove(i);
                 if (!prefixList.isEmpty())
-                prefixList.add(removed);
+                    prefixList.add(removed);
                 permute(prefixList, list, subsetSize);
                 prefixList.remove(removed);
                 list.add(i, removed);
@@ -60,7 +60,7 @@ public class Maximal_AND_Subsequences {
     private static void heapItUp(List<Long> list) {
         long temp = list.get(0);
         for (int i = 0; i < list.size(); i++)
-               temp = temp & list.get(i);
+            temp = temp & list.get(i);
         priorityQueue.add(temp);
     }
 

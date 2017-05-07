@@ -1,4 +1,4 @@
-package competitions.World_Codesprint_10;
+package competitions.world_codesprint_10;
 
 import java.io.PrintWriter;
 import java.util.Scanner;

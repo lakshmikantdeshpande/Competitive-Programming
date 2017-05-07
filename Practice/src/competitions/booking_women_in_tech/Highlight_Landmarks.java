@@ -1,4 +1,4 @@
-package competitions.Booking_Women_In_Tech;
+package competitions.booking_women_in_tech;
 
 import java.io.PrintWriter;
 import java.util.HashSet;
