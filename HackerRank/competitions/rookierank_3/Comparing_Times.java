@@ -1,4 +1,4 @@
-package competitions.rookie_rank_3;
+package competitions.rookierank_3;
 
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
