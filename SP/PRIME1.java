@@ -1,36 +1,43 @@
+// INCOMPLETE CODE
+
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 class PRIME1 {
-    public static void main(String args[]) throws Exception {
-        Scanner scanner = new Scanner(System.in);
-        PrintWriter pw = new PrintWriter(System.out);
+    private static List<Integer> simplesieve(int limit) {
+        boolean primes[] = new boolean[limit + 1];
+        Arrays.fill(primes, true);
 
-        int N = scanner.nextInt();
-        while (N-- > 0) {
-            sieveOfEratosthenes(scanner.nextInt(), scanner.nextInt(), pw);
-        }
-
-        pw.close();
-        scanner.close();
-    }
-
-    private static void sieveOfEratosthenes(int low, int high, PrintWriter pw) {
-        boolean[] primes = new boolean[high + 1];
-        primes[0] = primes[1] = true;
-
-        for (int i = 2; i * i <= high; i++) {
-            if (!primes[i]) {
-                if (i >= low)
-                    pw.println(i);
-
-                for (int j = 2 * i; j <= high; j += i) {
-                    primes[j] = true;
-                }
+        for (int i = 2; i <= Math.sqrt(limit); i++) {
+            if (primes[i]) {
+                for (int j = i * 2; j <= limit; j += i)
+                    primes[j] = false;
             }
         }
 
-        pw.println();
+        List<Integer> list = new ArrayList<Integer>();
+        for (int i = 2; i <= limit; i++) {
+            if (primes[i])
+                list.add(i);
+        }
+        return list;
+    }
+
+    public static void main(String[] args) throws Exception {
+        Scanner scanner = new Scanner(System.in);
+        PrintWriter pw = new PrintWriter(System.out);
+
+        int T = scanner.nextInt();
+
+        while (T-- > 0) {
+            int m = scanner.nextInt();
+            int n = scanner.nextInt();
+            List<Integer> list = simplesieve(n);
+        }
+        scanner.close();
+        pw.close();
     }
 }

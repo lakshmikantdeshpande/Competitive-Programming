@@ -10,9 +10,11 @@ public class Sieve_Of_Eratosthenes {
         primes[0] = false;  // duh !
         primes[1] = false;  // duh !
 
-        for (int i = 2; i * i <= n; i++) {
+        int squareRoot = (int) Math.sqrt(n);
+
+        for (int i = 2; i <= squareRoot; i++) {
             if (primes[i]) {
-                for (int j = 2 * i; j <= n; j += i) {
+                for (int j = i * i; j <= n; j += i) {
                     primes[j] = false;
                 }
             }
@@ -24,6 +26,6 @@ public class Sieve_Of_Eratosthenes {
     }
 
     public static void main(String[] args) {
-        sieveOfEratosthenes(30);
+        sieveOfEratosthenes(14);
     }
 }
