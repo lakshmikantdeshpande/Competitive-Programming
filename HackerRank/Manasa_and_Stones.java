@@ -15,6 +15,17 @@ public class Manasa_and_Stones {
             int A = scanner.nextInt();
             int B = scanner.nextInt();
 
+            if (A == B) {
+                pw.println((N - 1) * A);
+                continue;
+            }
+
+            if (A > B) {
+                int temp = A;
+                A = B;
+                B = temp;
+            }
+
             int i = N - 1, j = 0;
             while (i >= 0) {
                 pw.print(i * A + j * B + " ");
