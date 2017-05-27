@@ -1,8 +1,6 @@
-// N + N time N space
+// N + N time 1 space
 
 import java.io.PrintWriter;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 class Happy_Ladybugs {
@@ -11,35 +9,42 @@ class Happy_Ladybugs {
         PrintWriter pw = new PrintWriter(System.out);
 
         int T = scanner.nextInt();
-        scanner.nextLine();
 
         while (T-- > 0) {
+            int N = scanner.nextInt();
             scanner.nextLine();
-            String string = scanner.nextLine();
-
-            Map<Character, Integer> map = new HashMap<>();
-            boolean flag = true;
-
-            if (string.contains("_")) {
-                for (int i = 0; i < string.length(); i++) {
-                    char c = string.charAt(i);
-                    map.put(c, map.containsKey(c) ? map.get(c) + 1 : 1);
-                }
-                map.remove('_');        // no need to have underscores in the map
-
-                for (int value : map.values()) {
-                    if (value == 1) {
-                        flag = false;
-                        break;
-                    }
-                }
-            } else {
-                flag = string.matches("((\\w)(\\2+))+");
-            }
-            pw.println(flag ? "YES" : "NO");
+            pw.println(areHappy(scanner.nextLine(), N) ? "YES" : "NO");
         }
 
         pw.close();
         scanner.close();
+    }
+
+    private static boolean areHappy(String string, int N) {
+        char[] array = new char[26];
+        boolean hasUnderscores = false;
+        boolean allAreHappy = true;
+
+        for (int i = 0; i < N; i++) {
+            if (string.charAt(i) == '_')
+                hasUnderscores = true;
+            else {
+                array[string.charAt(i) - 'A']++; // counter of character
+                // if character is same to previous or next character
+                if (!((i > 0 && string.charAt(i) == string.charAt(i - 1) || (i < N - 1 && string.charAt(i) == string.charAt(i + 1)))))
+                    allAreHappy = false;
+            }
+        }
+
+        if (allAreHappy)
+            return true;
+        if (!hasUnderscores)
+            return false;
+
+        for (int i = 0; i < 26; i++) {
+            if (array[i] == 1)
+                return false;
+        }
+        return true;
     }
 }
