@@ -8,13 +8,13 @@ class Inserting_a_Node_Into_a_SortedDoublyLinkedList {
         Node prev;
     }
 
-    private static Node SortedInsert(Node head,int data) {
+    private static Node SortedInsert(Node head, int data) {
         Node temp = new Node();
         temp.data = data;
 
         if (head == null)
             return temp;
-        else if (head.data <= data) {
+        else if (head.data > data) {
             temp.next = head;
             head.prev = temp;
             return temp;
@@ -32,9 +32,7 @@ class Inserting_a_Node_Into_a_SortedDoublyLinkedList {
     }
 
     private static void display(Node node) {
-        if (node == null)
-            return;
-        else {
+        if (node != null) {
             while (node != null) {
                 System.out.print(node.data + " -> ");
                 node = node.next;
@@ -49,7 +47,7 @@ class Inserting_a_Node_Into_a_SortedDoublyLinkedList {
         int T = scanner.nextInt();
         while (T-- > 0) {
             int N = scanner.nextInt();
-            Node temp = new Node();
+            Node temp = null;
             while (N-- > 0) {
                 temp = SortedInsert(temp, scanner.nextInt());
             }
