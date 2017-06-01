@@ -10,37 +10,30 @@ public class Largest_Rectangle {
         Stack<Integer> stack = new Stack<>();
 
         int N = scanner.nextInt();
-        int min = Integer.MAX_VALUE;
-        int maxrect = 1;
-        int temprec = 1;
+        int[] array = new int[N];
+        int maxrect = Integer.MIN_VALUE;
 
-        while (N-- > 0) {
-            int temp = scanner.nextInt();
-            if (stack.isEmpty()) {
-                min = temp;
-                stack.push(temp);
-            } else {
-                if (temp >= min) {
-                    stack.push(temp);
-                    temprec++;
-                    if (temprec * min > maxrect) {
-                        maxrect = min * temprec;
-                        System.out.println("MIN" + min + " TEMP " + temprec);
-                    }
-                } else {
-                    stack.clear();
-                    temprec = 1;
-                    min = temp;
-                    stack.push(temp);
-                }
+        for (int i = 0; i < N; i++) {
+            array[i] = scanner.nextInt();
+        }
+
+        int i = 0;
+        while (i < N) {
+            if (stack.isEmpty() || array[i] >= array[stack.peek()])
+                stack.push(i++);
+            else {
+                int top = stack.pop();
+                maxrect = Math.max(maxrect, array[top] * (stack.isEmpty() ? i : i - stack.peek() - 1));
             }
         }
+
+        while (!stack.isEmpty()) {
+            int top = stack.pop();
+            maxrect = Math.max(maxrect, array[top] * (stack.isEmpty() ? i : i - stack.peek() - 1));
+        }
+
         pw.println(maxrect);
-        stack = null;
         pw.close();
-        pw = null;
         scanner.close();
-        scanner = null;
-        System.gc();
     }
 }
