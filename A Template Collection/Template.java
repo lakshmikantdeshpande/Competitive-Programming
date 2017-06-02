@@ -25,4 +25,8 @@ class FastsTemplate {
         pw.close();
         br.close();
     }
+
+    private int parseInt(String string) {
+        return Integer.parseInt(string);
+    }
 }
