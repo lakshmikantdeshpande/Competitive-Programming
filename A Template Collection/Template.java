@@ -26,7 +26,11 @@ class FastsTemplate {
         br.close();
     }
 
-    private int parseInt(String string) {
+    private static int parseInt(String string) {
         return Integer.parseInt(string);
+    }
+
+    private static long parseLong(String string) {
+        return Long.parseLong(string);
     }
 }
