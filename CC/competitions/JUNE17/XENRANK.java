@@ -9,11 +9,10 @@ class XENRANK {
     public static void main(String args[]) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         PrintWriter pw = new PrintWriter(System.out);
-        StringTokenizer strt = new StringTokenizer("");
 
         int T = parseInt(br.readLine());
         while (T-- > 0) {
-            strt = new StringTokenizer(br.readLine());
+            StringTokenizer strt = new StringTokenizer(br.readLine());
             int x = parseInt(strt.nextToken());
             int y = parseInt(strt.nextToken());
             pw.println(result(x, y));
@@ -30,7 +29,7 @@ class XENRANK {
 
     private static String result(int x, int y) {
         long temp = x + y;
-        return (((temp  + 1) * (temp + 2)) / 2) - temp + (temp - y) + "";
+        return (((temp + 1) * (temp + 2)) / 2) - temp + (temp - y) + "";
     }
 
 }

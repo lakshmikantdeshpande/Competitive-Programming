@@ -20,7 +20,7 @@ class FastsTemplate {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         PrintWriter pw = new PrintWriter(System.out);
 
-        int N = Integer.parseInt(br.readLine());
+        int N = parseInt(br.readLine());
 
         pw.close();
         br.close();
