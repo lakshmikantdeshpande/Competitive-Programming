@@ -1,20 +1,26 @@
 // N time N space
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.util.Scanner;
-import java.util.Stack;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.ListIterator;
+import java.util.StringTokenizer;
 
 class Poisonous_Plants {
     public static void main(String args[]) throws Exception {
-        Scanner scanner = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         PrintWriter pw = new PrintWriter(System.out);
 
-        int N = scanner.nextInt();
-        Stack<Long> stack = new Stack<>();
-        Stack<Long> tempStack = new Stack<>();
+        int N = parseInt(br.readLine());
+        List<Long> list = new LinkedList<>();
+
+        // initially we get the reverse stack, so we used stack.peek() >= temp instead of <=
+        StringTokenizer strt = new StringTokenizer(br.readLine());
 
         for (int i = 0; i < N; i++) {
-            stack.push(scanner.nextLong());
+            list.add(parseLong(strt.nextToken()));
         }
 
         if (N == 1)
@@ -25,19 +31,17 @@ class Poisonous_Plants {
 
             while (!isFinished) {
                 boolean plantDied = false;
-                while (!stack.isEmpty()) {
-                    long temp = stack.pop();
-                    //  if any plant has more pesticide than the plant at its left, it will die
-                    // otherwise we will push it to temp stack
-                    if (stack.isEmpty() || stack.peek() >= temp)
-                        tempStack.push(temp);
-                    else
-                        plantDied = true;
-                }
+                ListIterator<Long> iterator = list.listIterator();
+                long last = iterator.next();
 
-                // transfer stronger plants to tempStack
-                while (!tempStack.isEmpty())
-                    stack.push(tempStack.pop());
+                while (iterator.hasNext()) {
+                    long temp = iterator.next();
+                    if (temp > last) {
+                        iterator.remove();
+                        plantDied = true;
+                    }
+                    last = temp;
+                }
 
                 // if no plants die, dying will be finished (isFinished = true)
                 if (!plantDied)
@@ -49,6 +53,14 @@ class Poisonous_Plants {
         }
 
         pw.close();
-        scanner.close();
+        br.close();
+    }
+
+    private static int parseInt(String string) {
+        return Integer.parseInt(string);
+    }
+
+    private static long parseLong(String string) {
+        return Long.parseLong(string);
     }
 }
