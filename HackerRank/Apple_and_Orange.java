@@ -1,7 +1,7 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Apple_and_Orange {
+class Apple_and_Orange {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

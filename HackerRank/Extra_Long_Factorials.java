@@ -2,7 +2,7 @@ import java.io.PrintWriter;
 import java.math.BigInteger;
 import java.util.Scanner;
 
-public class Extra_Long_Factorials {
+class Extra_Long_Factorials {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

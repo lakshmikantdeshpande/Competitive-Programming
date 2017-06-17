@@ -3,7 +3,7 @@ package competitions.rookierank_3;
 import java.io.PrintWriter;
 import java.util.*;
 
-public class Max_Score {
+class Max_Score {
     private static long answer = Integer.MIN_VALUE;
 
     public static void main(String args[]) throws Exception {

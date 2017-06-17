@@ -3,7 +3,7 @@ package competitions.rookierank_3;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Find_The_Bug {
+class Find_The_Bug {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

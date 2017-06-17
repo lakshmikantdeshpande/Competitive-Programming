@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Algorithmic_Crush {
+class Algorithmic_Crush {
     static Scanner scanner = new Scanner(System.in);
     static PrintWriter out = new PrintWriter(System.out);
 

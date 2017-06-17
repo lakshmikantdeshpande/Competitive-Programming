@@ -1,7 +1,7 @@
 // N time 1 space
 // handled Overflow case
 
-public class Reverse_Integer {
+class Reverse_Integer {
     public int reverse(int x) {
         long temp = 0;
         while (x != 0) {
@@ -10,6 +10,6 @@ public class Reverse_Integer {
             if (temp > Integer.MAX_VALUE || temp < Integer.MIN_VALUE)
                 return 0;
         }
-        return (int)temp;
+        return (int) temp;
     }
 }

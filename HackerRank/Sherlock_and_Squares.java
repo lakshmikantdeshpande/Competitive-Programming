@@ -1,7 +1,7 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Sherlock_and_Squares {
+class Sherlock_and_Squares {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

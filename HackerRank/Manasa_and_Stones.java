@@ -3,7 +3,7 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Manasa_and_Stones {
+class Manasa_and_Stones {
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);
         PrintWriter pw = new PrintWriter(System.out);

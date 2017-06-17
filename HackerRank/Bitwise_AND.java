@@ -1,7 +1,7 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Bitwise_AND {
+class Bitwise_AND {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

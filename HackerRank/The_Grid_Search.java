@@ -3,7 +3,7 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class The_Grid_Search {
+class The_Grid_Search {
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);
         PrintWriter pw = new PrintWriter(System.out);

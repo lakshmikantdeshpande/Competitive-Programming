@@ -3,7 +3,7 @@ package competitions.Booking_Women_In_Tech;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Visiting_Manhattan {
+class Visiting_Manhattan {
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);
         PrintWriter pw = new PrintWriter(System.out);

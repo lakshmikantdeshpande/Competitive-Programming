@@ -2,7 +2,7 @@ import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
-public class Queens_Attack_II {
+class Queens_Attack_II {
 
     private static Set<String> set;
 

@@ -3,7 +3,7 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Bit_Manipulation_Lonely_Integer {
+class Bit_Manipulation_Lonely_Integer {
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);
         PrintWriter pw = new PrintWriter(System.out);

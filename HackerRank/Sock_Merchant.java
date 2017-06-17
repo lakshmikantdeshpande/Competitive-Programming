@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Sock_Merchant {
+class Sock_Merchant {
     private static Scanner scanner;
     private static PrintStream ps;
 

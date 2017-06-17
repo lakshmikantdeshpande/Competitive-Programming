@@ -3,7 +3,7 @@ package competitions.world_codesprint_10;
 import java.io.PrintWriter;
 import java.util.*;
 
-public class Maximal_AND_Subsequences {
+class Maximal_AND_Subsequences {
 
     private static PriorityQueue<Long> priorityQueue;
 

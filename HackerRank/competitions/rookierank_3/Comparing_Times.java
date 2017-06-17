@@ -6,7 +6,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Scanner;
 
-public class Comparing_Times {
+class Comparing_Times {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

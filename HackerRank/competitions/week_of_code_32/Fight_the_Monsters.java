@@ -4,7 +4,7 @@ import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Fight_the_Monsters {
+class Fight_the_Monsters {
 
     static private int getMaxMonsters(int n, int hitPower, int maxhits, int[] h) {
         int i = 0;

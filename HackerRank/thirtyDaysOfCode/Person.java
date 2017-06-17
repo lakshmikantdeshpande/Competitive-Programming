@@ -1,7 +1,7 @@
 // Day 4
 package thirtyDaysOfCode;
 
-public class Person {
+class Person {
     private int age;
 
     public Person(int initialAge) {

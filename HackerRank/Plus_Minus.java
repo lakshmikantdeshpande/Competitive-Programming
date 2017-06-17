@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Plus_Minus {
+class Plus_Minus {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String args[]) throws Exception {

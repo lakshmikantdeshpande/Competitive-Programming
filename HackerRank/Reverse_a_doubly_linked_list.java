@@ -2,16 +2,6 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 class Reverse_a_doubly_linked_list {
-    static class Node {
-        int data;
-        Node next;
-        Node prev;
-
-        Node(int data) {
-            this.data = data;
-        }
-    }
-
     private static Node Reverse(Node head) {
         if (head == null || head.next == null)
             return head;
@@ -52,5 +42,15 @@ class Reverse_a_doubly_linked_list {
 
         pw.close();
         scanner.close();
+    }
+
+    static class Node {
+        int data;
+        Node next;
+        Node prev;
+
+        Node(int data) {
+            this.data = data;
+        }
     }
 }

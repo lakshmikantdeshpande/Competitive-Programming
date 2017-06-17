@@ -3,7 +3,7 @@ package competitions.week_of_code_31;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Accurate_Sorting {
+class Accurate_Sorting {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

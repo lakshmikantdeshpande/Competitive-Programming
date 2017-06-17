@@ -3,7 +3,7 @@
 
 import java.util.Arrays;
 
-public class Sieve_Of_Eratosthenes {
+class Sieve_Of_Eratosthenes {
     public static void sieveOfEratosthenes(int n) {
         boolean[] primes = new boolean[n + 1];
         Arrays.fill(primes, true);

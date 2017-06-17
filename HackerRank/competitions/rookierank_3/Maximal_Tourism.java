@@ -3,7 +3,7 @@ package competitions.rookierank_3;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Maximal_Tourism {
+class Maximal_Tourism {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

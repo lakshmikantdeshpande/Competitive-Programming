@@ -2,10 +2,33 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 class Monks_Love_for_Food {
+    public static void main(String[] args) throws Exception {
+        PrintWriter pw = new PrintWriter(System.out);
+        Scanner scanner = new Scanner(System.in);
+
+        int queries = scanner.nextInt();
+        Stack stack = new Stack(1024);
+
+        while (queries-- > 0) {
+            int choice = scanner.nextInt();
+            if (choice == 1) {
+                if (stack.isEmpty())
+                    pw.println("No Food");
+                else
+                    pw.println(stack.pop());
+            } else {
+                stack.push(scanner.nextInt());
+            }
+        }
+
+        pw.close();
+        scanner.close();
+    }
+
     static class Stack {
+        private final int[] array;
         private int top = -1;
         private int size = 0;
-        private final int[] array;
 
         Stack(int sz) {
             if (sz <= 0 || sz == Integer.MAX_VALUE)
@@ -37,28 +60,5 @@ class Monks_Love_for_Food {
             return top == -1;
         }
 
-    }
-
-    public static void main(String[] args) throws Exception {
-        PrintWriter pw = new PrintWriter(System.out);
-        Scanner scanner = new Scanner(System.in);
-
-        int queries = scanner.nextInt();
-        Stack stack = new Stack(1024);
-
-        while (queries-- > 0) {
-            int choice = scanner.nextInt();
-            if (choice == 1) {
-                if (stack.isEmpty())
-                    pw.println("No Food");
-                else
-                    pw.println(stack.pop());
-            } else {
-                stack.push(scanner.nextInt());
-            }
-        }
-
-        pw.close();
-        scanner.close();
     }
 }

@@ -1,14 +1,26 @@
 // N time N space
 
-public class Add_Two_Numbers {
+class Add_Two_Numbers {
 
-    private static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
+    private static void display(ListNode temp) {
+        if (temp != null) {
+            while (temp != null) {
+                System.out.print(temp.val + "->");
+                temp = temp.next;
+            }
         }
+    }
+
+    public static void main(String args[]) throws Exception {
+        ListNode a = new ListNode(0);
+        a.next = new ListNode(2);
+        a.next.next = new ListNode(3);
+
+        ListNode b = new ListNode(1);
+        b.next = new ListNode(6);
+        b.next.next = new ListNode(4);
+        Add_Two_Numbers atn = new Add_Two_Numbers();
+        display(atn.addTwoNumbers(a, b));
     }
 
     private ListNode addTwoNumbers(ListNode l1, ListNode l2) {
@@ -32,24 +44,12 @@ public class Add_Two_Numbers {
         return head.next;
     }
 
-    private static void display(ListNode temp) {
-        if (temp != null) {
-            while (temp != null) {
-                System.out.print(temp.val + "->");
-                temp = temp.next;
-            }
+    private static class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
         }
-    }
-
-    public static void main(String args[]) throws Exception {
-        ListNode a = new ListNode(0);
-        a.next = new ListNode(2);
-        a.next.next = new ListNode(3);
-
-        ListNode b = new ListNode(1);
-        b.next = new ListNode(6);
-        b.next.next = new ListNode(4);
-        Add_Two_Numbers atn = new Add_Two_Numbers();
-        display(atn.addTwoNumbers(a, b));
     }
 }

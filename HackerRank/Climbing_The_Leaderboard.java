@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Climbing_The_Leaderboard {
+class Climbing_The_Leaderboard {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

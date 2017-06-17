@@ -2,7 +2,7 @@ package competitions.week_of_code_30;
 
 import java.util.Scanner;
 
-public class Candy_Replenishing_Robot {
+class Candy_Replenishing_Robot {
 
     public static void main(String args[]) throws Exception {
 

@@ -2,7 +2,7 @@ import java.io.PrintWriter;
 import java.util.BitSet;
 import java.util.Scanner;
 
-public class ACM_ICPC_Team {
+class ACM_ICPC_Team {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

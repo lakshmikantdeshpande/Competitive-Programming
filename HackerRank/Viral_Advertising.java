@@ -1,7 +1,7 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Viral_Advertising {
+class Viral_Advertising {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

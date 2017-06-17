@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 
-public class Beautiful_World {
+class Beautiful_World {
     static Scanner scanner = new Scanner(new BufferedReader(new InputStreamReader(System.in)));
 
     public static void main(String[] args) throws IOException {

@@ -1,7 +1,7 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Staircase {
+class Staircase {
 
     static Scanner scanner = new Scanner(System.in);
     static PrintWriter pw = new PrintWriter(System.out);

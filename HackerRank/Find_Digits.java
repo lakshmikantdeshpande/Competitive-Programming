@@ -4,7 +4,7 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Find_Digits {
+class Find_Digits {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

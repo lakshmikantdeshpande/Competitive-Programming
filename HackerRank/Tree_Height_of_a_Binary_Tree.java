@@ -12,7 +12,7 @@ class Node {
     }
 }
 
-public class Tree_Height_of_a_Binary_Tree {
+class Tree_Height_of_a_Binary_Tree {
 
     static int height(Node root) {
         return getHeight(root) - 1;

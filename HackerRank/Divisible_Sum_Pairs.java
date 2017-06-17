@@ -2,7 +2,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Divisible_Sum_Pairs {
+class Divisible_Sum_Pairs {
 
     static Scanner scanner = new Scanner(System.in);
     static PrintWriter pw = new PrintWriter(System.out);

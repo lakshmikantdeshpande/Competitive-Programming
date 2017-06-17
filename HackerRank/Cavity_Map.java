@@ -3,7 +3,7 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Cavity_Map {
+class Cavity_Map {
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);
         PrintWriter pw = new PrintWriter(System.out);

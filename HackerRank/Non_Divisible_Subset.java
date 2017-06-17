@@ -3,7 +3,7 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Non_Divisible_Subset {
+class Non_Divisible_Subset {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

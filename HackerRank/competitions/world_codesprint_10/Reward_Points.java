@@ -3,7 +3,7 @@ package competitions.world_codesprint_10;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Reward_Points {
+class Reward_Points {
     public static void main(String args[]) throws Exception {
 
         Scanner scanner = new Scanner(System.in);

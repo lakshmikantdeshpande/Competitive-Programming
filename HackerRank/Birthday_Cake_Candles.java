@@ -1,7 +1,7 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Birthday_Cake_Candles {
+class Birthday_Cake_Candles {
     static Scanner scanner = new Scanner(System.in);
     static PrintWriter pw = new PrintWriter(System.out);
 

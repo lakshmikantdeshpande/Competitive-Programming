@@ -2,7 +2,7 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class Equal_Stacks {
+class Equal_Stacks {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

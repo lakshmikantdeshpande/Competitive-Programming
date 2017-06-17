@@ -42,7 +42,7 @@ class email {
     }
 }
 
-public class Emails_emails_everywhere {
+class Emails_emails_everywhere {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

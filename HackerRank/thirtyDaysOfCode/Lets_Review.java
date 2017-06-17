@@ -4,7 +4,7 @@ package thirtyDaysOfCode;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Lets_Review {
+class Lets_Review {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

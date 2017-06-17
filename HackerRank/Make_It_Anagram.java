@@ -2,7 +2,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Make_It_Anagram {
+class Make_It_Anagram {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);

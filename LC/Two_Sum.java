@@ -7,6 +7,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 class Two_Sum {
+    public static void main(String[] args) {
+        Two_Sum ts = new Two_Sum();
+        int[] array = new int[]{2, 7, 11, 15};
+        System.out.println(Arrays.toString(ts.twoSum(array, 9)));
+        System.out.println(Arrays.toString(ts.twoSum1(array, 9)));
+        System.out.println(Arrays.toString(ts.twoSum2(array, 9)));
+    }
+
     public int[] twoSum(int[] nums, int target) {
         int[] answer = new int[2];
         Map<Integer, Integer> map = new HashMap<>();
@@ -46,13 +54,5 @@ class Two_Sum {
             }
         }
         return answer;
-    }
-
-    public static void main(String[] args) {
-        Two_Sum ts = new Two_Sum();
-        int[] array = new int[]{2, 7, 11, 15};
-        System.out.println(Arrays.toString(ts.twoSum(array, 9)));
-        System.out.println(Arrays.toString(ts.twoSum1(array, 9)));
-        System.out.println(Arrays.toString(ts.twoSum2(array, 9)));
     }
 }

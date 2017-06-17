@@ -3,7 +3,7 @@ package competitions.week_of_code_30;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class Find_the_Minimum_Number {
+class Find_the_Minimum_Number {
 
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

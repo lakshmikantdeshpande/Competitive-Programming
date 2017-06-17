@@ -2,7 +2,7 @@ import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Picking_Numbers {
+class Picking_Numbers {
     static Scanner scanner = new Scanner(System.in);
     static PrintWriter out = new PrintWriter(System.out);
 

@@ -1,7 +1,7 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Bon_Appetit {
+class Bon_Appetit {
 
     static Scanner scanner = new Scanner(System.in);
     static PrintWriter pw = new PrintWriter(System.out);

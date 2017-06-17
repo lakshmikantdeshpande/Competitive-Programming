@@ -3,7 +3,7 @@ package competitions.hack101_48;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Walking_Robots {
+class Walking_Robots {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

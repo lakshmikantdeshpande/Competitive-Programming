@@ -1,7 +1,7 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Circular_Rotation {
+class Circular_Rotation {
     static Scanner scanner = new Scanner(System.in);
     static PrintWriter out = new PrintWriter(System.out);
 

@@ -1,7 +1,7 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class The_Hurdle_Race {
+class The_Hurdle_Race {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

@@ -2,7 +2,7 @@ import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Minimum_Absolute_Difference_in_an_Array {
+class Minimum_Absolute_Difference_in_an_Array {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

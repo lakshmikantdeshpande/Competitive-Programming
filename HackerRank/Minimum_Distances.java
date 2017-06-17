@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Minimum_Distances {
+class Minimum_Distances {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

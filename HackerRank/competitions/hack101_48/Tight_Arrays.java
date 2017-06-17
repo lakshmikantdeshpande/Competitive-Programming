@@ -3,7 +3,7 @@ package competitions.hack101_48;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Tight_Arrays {
+class Tight_Arrays {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.util.Set;
 import java.util.StringTokenizer;
 
-public class Highlight_Landmarks {
+class Highlight_Landmarks {
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);
         PrintWriter pw = new PrintWriter(System.out);

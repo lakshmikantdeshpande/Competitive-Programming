@@ -2,7 +2,7 @@
 
 import java.util.Scanner;
 
-public class Kangaroo {
+class Kangaroo {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);

@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
-public class Counting_Valleys {
+class Counting_Valleys {
 
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static PrintWriter pw = new PrintWriter(System.out);

@@ -1,7 +1,7 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Beautiful_Days_at_the_Movies {
+class Beautiful_Days_at_the_Movies {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

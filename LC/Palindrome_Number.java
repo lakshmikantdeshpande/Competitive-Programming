@@ -1,6 +1,6 @@
 // N time 1 space
 
-public class Palindrome_Number {
+class Palindrome_Number {
     public boolean isPalindrome(int x) {
         // negative numbers are not palindromes here
         // other numbers ending with 0 are not palindromes either

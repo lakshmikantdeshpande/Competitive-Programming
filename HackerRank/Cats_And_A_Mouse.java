@@ -1,7 +1,7 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Cats_And_A_Mouse {
+class Cats_And_A_Mouse {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

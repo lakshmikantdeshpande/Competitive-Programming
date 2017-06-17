@@ -1,7 +1,7 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Append_and_Delete {
+class Append_and_Delete {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

@@ -3,7 +3,7 @@ import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
-public class Beautiful_Triplets {
+class Beautiful_Triplets {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

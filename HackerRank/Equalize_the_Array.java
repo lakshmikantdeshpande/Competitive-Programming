@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Equalize_the_Array {
+class Equalize_the_Array {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

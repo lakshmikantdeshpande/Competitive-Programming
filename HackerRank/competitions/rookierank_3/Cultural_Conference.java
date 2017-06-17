@@ -3,7 +3,7 @@ package competitions.rookierank_3;
 import java.io.PrintWriter;
 import java.util.*;
 
-public class Cultural_Conference {
+class Cultural_Conference {
     private static int min = Integer.MAX_VALUE;
 
     public static void main(String args[]) throws Exception {

@@ -1,7 +1,7 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Service_Lane {
+class Service_Lane {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

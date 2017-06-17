@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Dictionaries_and_Maps {
+class Dictionaries_and_Maps {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

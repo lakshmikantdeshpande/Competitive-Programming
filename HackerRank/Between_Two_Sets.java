@@ -1,7 +1,7 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Between_Two_Sets {
+class Between_Two_Sets {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

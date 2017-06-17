@@ -1,7 +1,7 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Birthday_Chocolate {
+class Birthday_Chocolate {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

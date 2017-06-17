@@ -3,7 +3,7 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Game_of_Two_Stacks {
+class Game_of_Two_Stacks {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

@@ -1,7 +1,7 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Grading_Students {
+class Grading_Students {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

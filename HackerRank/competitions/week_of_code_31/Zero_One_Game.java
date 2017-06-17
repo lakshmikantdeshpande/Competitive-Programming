@@ -3,7 +3,7 @@ package competitions.week_of_code_31;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Zero_One_Game {
+class Zero_One_Game {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

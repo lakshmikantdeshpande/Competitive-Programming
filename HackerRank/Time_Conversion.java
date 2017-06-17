@@ -1,7 +1,7 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Time_Conversion {
+class Time_Conversion {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

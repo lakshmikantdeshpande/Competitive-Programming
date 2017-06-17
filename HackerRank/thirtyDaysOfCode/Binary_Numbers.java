@@ -5,7 +5,7 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class Binary_Numbers {
+class Binary_Numbers {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

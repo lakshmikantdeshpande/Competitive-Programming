@@ -1,7 +1,7 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Repeated_String {
+class Repeated_String {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);

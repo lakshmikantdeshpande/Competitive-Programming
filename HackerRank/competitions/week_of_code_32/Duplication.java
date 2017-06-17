@@ -3,7 +3,7 @@ package competitions.week_of_code_32;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Duplication {
+class Duplication {
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);
         PrintWriter pw = new PrintWriter(System.out);

@@ -2,12 +2,6 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 class Inserting_a_Node_Into_a_SortedDoublyLinkedList {
-    static class Node {
-        int data;
-        Node next;
-        Node prev;
-    }
-
     private static Node SortedInsert(Node head, int data) {
         Node temp = new Node();
         temp.data = data;
@@ -53,6 +47,12 @@ class Inserting_a_Node_Into_a_SortedDoublyLinkedList {
             }
             display(temp);
         }
+    }
+
+    static class Node {
+        int data;
+        Node next;
+        Node prev;
     }
 
 }

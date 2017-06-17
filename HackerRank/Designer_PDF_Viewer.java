@@ -1,7 +1,7 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Designer_PDF_Viewer {
+class Designer_PDF_Viewer {
 
     public static void main(String args[]) throws Exception {
         Scanner scanner = new Scanner(System.in);
