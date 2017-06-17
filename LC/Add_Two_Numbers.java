@@ -1,3 +1,5 @@
+// N time N space
+
 public class Add_Two_Numbers {
 
     private static class ListNode {

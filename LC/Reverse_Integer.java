@@ -1,3 +1,6 @@
+// N time 1 space
+// handled Overflow case
+
 public class Reverse_Integer {
     public int reverse(int x) {
         long temp = 0;
