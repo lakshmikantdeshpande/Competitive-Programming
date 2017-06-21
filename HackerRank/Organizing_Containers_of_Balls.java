@@ -1,4 +1,4 @@
-// N time 1 space
+// N * N time 1 space
 
 import java.io.PrintWriter;
 import java.util.Scanner;
@@ -11,22 +11,44 @@ class Organizing_Containers_of_Balls {
         int N = scanner.nextInt();
         while (N-- > 0) {
             int n = scanner.nextInt();
-            long[][] matrix = new long[n][n];
-            long sum = 0; // sum of all colors except current color
+            long[] x = new long[n];
+            long[] y = new long[n];
 
             // take matrix as input
             for (int i = 0; i < n; i++) {
                 for (int j = 0; j < n; j++) {
-                    matrix[i][j] = scanner.nextLong();
-                    if (i != j)
-                        sum += matrix[i][j];
+                    long temp = scanner.nextLong();
+                    x[i] += temp;
+                    y[j] += temp;
                 }
             }
 
-            pw.println(sum % 2 == 0 ? "Possible" : "Impossible");
+            boolean isPossible = true;
+            for (int i = 0; i < n; i++) {
+                int j = 0;
+                for (j = 0; j < n; j++) {
+                    if (x[i] == y[j]) {
+                        swap(i, j, y);
+                        break;
+                    }
+                }
+
+                if (j == n) {
+                    isPossible = false;
+                    break;
+                }
+            }
+
+            pw.println(isPossible ? "Possible" : "Impossible");
         }
 
         pw.close();
         scanner.close();
+    }
+
+    private static void swap(int i, int j, long[] array) {
+        long temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
     }
 }
