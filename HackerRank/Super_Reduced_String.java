@@ -1,3 +1,5 @@
+// N time 1 space
+
 import java.io.PrintWriter;
 import java.util.Scanner;
 
