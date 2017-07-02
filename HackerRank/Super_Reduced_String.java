@@ -6,16 +6,19 @@ public class Super_Reduced_String {
         Scanner scanner = new Scanner(System.in);
         PrintWriter pw = new PrintWriter(System.out);
 
-        int[] array = new int[26];
+        StringBuilder stringBuilder = new StringBuilder(scanner.nextLine());
 
-        for (char c : scanner.nextLine().toCharArray())
-            ++array[c - 97];
-
-        for (int i = 0; i < 26; i++) {
-            if (array[i] % 2 != 0)
-                pw.print((char) (i + 97));
+        for (int i = 1; i < stringBuilder.length(); i++) {
+            if (stringBuilder.charAt(i) == stringBuilder.charAt(i - 1)) {
+                stringBuilder.delete(i - 1, i + 1); // i + 1 is excluded
+                i = 0;
+            }
         }
 
+        if (stringBuilder.length() == 0)
+            pw.println("Empty String");
+        else
+            pw.println(stringBuilder.toString());
         pw.close();
         scanner.close();
     }
