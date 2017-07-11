@@ -1,10 +1,10 @@
 // Day 4
 package thirtyDaysOfCode;
 
-class Person {
+class Class_vs_Instance {
     private int age;
 
-    public Person(int initialAge) {
+    public Class_vs_Instance(int initialAge) {
         if (initialAge < 0) {
             System.out.println("Age is not valid, setting age to 0.");
             age = 0;
