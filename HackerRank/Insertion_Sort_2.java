@@ -3,7 +3,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.StringTokenizer;
 
-public class Insertion_Sort_1 {
+public class Insertion_Sort_2 {
     public static void main(String args[]) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         PrintWriter pw = new PrintWriter(System.out);
@@ -15,17 +15,17 @@ public class Insertion_Sort_1 {
             array[i] = parseInt(stringTokenizer.nextToken());
         }
 
-        int j = N - 1;
-        int temp = array[j];
-        for (; j >= 0; j--) {
-            if (j == 0 || temp >= array[j - 1]) {
-                array[j] = temp;
-                printArray(array, pw);
-                break;
-            } else {
-                array[j] = array[j - 1];
-                printArray(array, pw);
+        for (int j = 1; j < N; j++) {
+            int temp = array[j];
+            for (int k = j; k >= 0; k--) {
+                if (k == 0 || temp >= array[k - 1]) {
+                    array[k] = temp;
+                    break;
+                } else {
+                    array[k] = array[k - 1];
+                }
             }
+            printArray(array, pw);
         }
 
         pw.close();
