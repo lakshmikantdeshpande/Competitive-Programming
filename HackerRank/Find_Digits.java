@@ -1,5 +1,5 @@
 // simple modulo operation
-// rules : (a + b) % N = (a%N + b%N)%N  same for *
+// rules : (ArrayRotation1 + b) % N = (ArrayRotation1%N + b%N)%N  same for *
 
 import java.io.PrintWriter;
 import java.util.Scanner;

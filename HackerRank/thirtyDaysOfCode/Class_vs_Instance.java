@@ -14,7 +14,7 @@ class Class_vs_Instance {
     }
 
     public void amIOld() {
-        System.out.println(age < 13 ? "You are young." : (age >= 13 && age < 18 ? "You are a teenager." : "You are old."));
+        System.out.println(age < 13 ? "You are young." : (age >= 13 && age < 18 ? "You are ArrayRotation1 teenager." : "You are old."));
     }
 
     public void yearPasses() {
