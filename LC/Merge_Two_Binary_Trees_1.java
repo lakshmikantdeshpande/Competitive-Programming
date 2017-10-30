@@ -1,12 +1,13 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+
+    TreeNode(int x) {
+        val = x;
+    }
+}
+
 class Merge_Two_Binary_Trees {
     public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
         // If both of the treenodes are null, there is no point in processing
