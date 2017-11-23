@@ -1,6 +1,6 @@
 import java.util.Stack;
 
-class Solution {
+class ValidParenthes {
     public boolean isValid(String s) {
         if (s == null) {
             return false;
