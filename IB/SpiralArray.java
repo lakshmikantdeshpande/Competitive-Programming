@@ -5,7 +5,7 @@ public class SpiralArray {
 
     private static void printSpiral(List<List<Integer>> arrayList) {
         int top = 0, left = 0;
-        int bottom = arrayList.get(0).size() - 1, right = arrayList.get(0).size() - 1;
+        int bottom = arrayList.size() - 1, right = arrayList.get(0).size() - 1;
 
         int direction = 0;  // 0, 1, 2, 3   top, right, bottom, left
         while (top <= bottom && left <= right) {
