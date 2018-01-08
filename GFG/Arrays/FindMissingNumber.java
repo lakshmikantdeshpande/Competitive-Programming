@@ -17,12 +17,13 @@ public class FindMissingNumber {
         }
 
         System.out.format("\nThe missing number is %d", findMissingNumber1(array, N));
+        System.out.format("\nThe missing number is %d", findMissingNumber2(array, N));
         scanner.close();
     }
 
     private static int findMissingNumber1(int[] array, int N) {
-        if (array == null || array.length == 0) {
-            throw new RuntimeException("Null / Empty array");
+        if (array == null || array.length == 0 || N < array.length) {
+            throw new RuntimeException("Null / Empty array or invalid number of elements");
         }
 
         int x = 0, y = 0;
@@ -35,6 +36,19 @@ public class FindMissingNumber {
             y ^= i;
         }
         return x ^ y;
+    }
+
+    private static int findMissingNumber2(int[] array, int N) {
+        if (array == null || array.length == 0 || N < array.length) {
+            throw new RuntimeException("Null / Empty array or invalid number of elements");
+        }
+
+        int expectedSum = (N * (N + 1)) / 2;
+        int actualSum = 0;
+        for (int i = 0; i < array.length; i++) {
+            actualSum += array[i];
+        }
+        return expectedSum - actualSum;
     }
 
 }
