@@ -26,9 +26,10 @@ public class ReverseLinkedListInKSizeGroups {
     }
 
     private static void display(Node head) {
-        while (head != null) {
-            System.out.print(head.data + " -> ");
-            head = head.next;
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + " -> ");
+            temp = temp.next;
         }
         System.out.println();
     }
@@ -38,12 +39,34 @@ public class ReverseLinkedListInKSizeGroups {
             return null;
         }
 
-        Node prev = null, curr = head;
+        Node prev = null, next = null, curr = head;
         while (curr != null) {
-            Node next = curr.next;
+            next = curr.next;
             curr.next = prev;
             prev = curr;
             curr = next;
+        }
+
+        return prev;
+    }
+
+    private static Node reverseInGroups(Node head, int size) {
+        if (head == null) {
+            return null;
+        }
+
+        Node prev = null, next = null, curr = head;
+        int count = 0;
+        while (count < size && curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+            count++;
+        }
+
+        if (next != null) {
+            head.next = reverseInGroups(next, size);
         }
 
         return prev;
@@ -59,9 +82,14 @@ public class ReverseLinkedListInKSizeGroups {
         insert(head, 7);
         insert(head, 8);
         insert(head, 9);
+        insert(head, 10);
+        insert(head, 11);
 
         display(head);
-        display(reverseLinkedList(head));
+        head = reverseInGroups(head, 3);
+        display(head);
+        head = reverseLinkedList(head);
+        display(head);
     }
 
 }
