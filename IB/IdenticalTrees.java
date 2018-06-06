@@ -1,16 +1,19 @@
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-        left = null;
-        right = null;
-    }
-}
+package IB;
 
 public class IdenticalTrees {
+    private static class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int x) {
+            val = x;
+            left = null;
+            right = null;
+        }
+    }
+
+
     public int isSameTree(TreeNode A, TreeNode B) {
         if (A == null && B == null) {
             return 1;
