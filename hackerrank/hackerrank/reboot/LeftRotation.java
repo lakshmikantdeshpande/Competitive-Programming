@@ -3,7 +3,7 @@ package hackerrank.hackerrank.reboot;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class ArrayRotation {
+public class LeftRotation {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
