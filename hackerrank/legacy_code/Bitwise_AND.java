@@ -31,9 +31,6 @@ class Bitwise_AND {
         }
 
         pw.close();
-        pw = null;
         scanner.close();
-        scanner = null;
-        System.gc();
     }
 }
