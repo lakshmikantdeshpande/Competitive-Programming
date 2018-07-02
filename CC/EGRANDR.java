@@ -1,36 +1,38 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+package CC;
+
 import java.io.PrintWriter;
+import java.util.Scanner;
 
 class EGRANDR {
-    public static void main(String args[]) throws Exception {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         PrintWriter pw = new PrintWriter(System.out);
 
-        int T = Integer.parseInt(br.readLine());
+        int T = scanner.nextInt();
         while (T-- > 0) {
-            int N = Integer.parseInt(br.readLine());
-            float sum = 0f;
-            boolean passedAllSubjects = true;
-            boolean oneFullScore = false;
+            boolean hasFailed = false;
+            boolean hasFullMarks = false;
 
-            String[] array = br.readLine().split(" ");
+            float sum = 0;
+            int N = scanner.nextInt();
             for (int i = 0; i < N; i++) {
-                int temp = Integer.parseInt(array[i]);
-                if (temp <= 2)
-                    passedAllSubjects = false;
-                else if (temp == 5)
-                    oneFullScore = true;
+                int temp = scanner.nextInt();
                 sum += temp;
+                if (temp <= 2) {
+                    hasFailed = true;
+                } else if (temp == 5) {
+                    hasFullMarks = true;
+                }
             }
             sum /= N;
-            if (sum >= 4.0f && passedAllSubjects && oneFullScore)
-                pw.println("Yes");
-            else
+            if (hasFailed || !hasFullMarks || sum < 4.0f) {
                 pw.println("No");
+            } else {
+                pw.println("Yes");
+            }
         }
 
         pw.close();
-        br.close();
+        scanner.close();
     }
 }

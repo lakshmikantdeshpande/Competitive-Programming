@@ -15,7 +15,7 @@ class QUADROOT {
 
         double answer1 = (-b + Math.sqrt(b * b - (4 * (a * c)))) / (2 * a);
         double answer2 = (-b - Math.sqrt(b * b - (4 * (a * c)))) / (2 * a);
-        System.out.printf("%f\n%f", answer1, answer2);
+        pw.printf("%f\n%f", answer1, answer2);
 
         pw.close();
         scanner.close();
