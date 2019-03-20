@@ -1,6 +1,6 @@
 // lakshmikantd
-// https://practice.geeksforgeeks.org/problems/subarray-with-given-sum/0
-// N * N time 1 space
+// https://www.geeksforgeeks.org/find-subarray-with-given-sum/
+// N time 1 space
 
 import java.io.PrintWriter;
 import java.util.Scanner;
@@ -20,20 +20,30 @@ class Solution {
 		scanner.close();
 	}
 	
+
+	/*
+		**********0*****
+		0 is start
+		look for elements before 0
+
+	*/
 	private static void printSumSubarray(int[] array, int requiredSum) {
-	    for (int i = 0; i < array.length; i++) {
-	        int start = i;
-	        int sum = array[start];
-	        for (int j = i + 1; j <= array.length; j++) {
-                if (sum == requiredSum) {
-	                System.out.println((start + 1) + " " + (j));
-	                return;
-	            }
-	            if (sum > requiredSum || j == array.length) {
-                    break;
-	            }
-	            sum += array[j];
-	        }
+		int sum = array[0];
+		int start = 0;
+	    for (int i = 1; i <= array.length; i++) {
+	    	// Keep reducing the sum until it becomes equal to sum
+	    	while (sum > requiredSum && start < i - 1) {
+	    		sum -= array[start++];
+	    	}
+
+	    	if (sum == requiredSum) {
+	    		System.out.println(start + 1 + " " + i);
+	    		return;
+	    	}
+
+	    	if (i < array.length) {
+	    		sum += array[i];
+	    	}
 	    }
 	    System.out.println(-1);
 	}
