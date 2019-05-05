@@ -1,14 +1,22 @@
+// lakshmikantd on CodeChef, HackerEarth
+// lakshmikantdeshpande on HackerRank, GitHub, GeeksForGeeks
+
 import java.io.PrintWriter;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
 
 class Solution {
-	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
+	public static void main(String[] args) throws IOException {
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		PrintWriter writer = new PrintWriter(System.out);
 
-		int T = scanner.nextInt();
+		int testCases = Integer.parseInt(reader.readLine());
+		while (testCases-- > 0) {
+
+		}
 		
-		scanner.close();
+		reader.close();
 		writer.close();
 	}
 }
