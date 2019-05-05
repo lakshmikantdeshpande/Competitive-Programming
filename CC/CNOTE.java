@@ -1,9 +1,11 @@
+package CC;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
-class Solution {
+class CNOTE {
 
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -20,12 +22,12 @@ class Solution {
       int requiredPages = pagesForPoetry - availablePages;
       boolean notebookFound = false;
       while (notebooks-- > 0) {
-      	tokens = br.readLine().split(" ");
-      	int pages = Integer.parseInt(tokens[0]);
-      	int price = Integer.parseInt(tokens[1]);
-      	if (pages >= requiredPages && price <= money) {
-      		notebookFound = true;
-      	}
+        tokens = br.readLine().split(" ");
+        int pages = Integer.parseInt(tokens[0]);
+        int price = Integer.parseInt(tokens[1]);
+        if (pages >= requiredPages && price <= money) {
+          notebookFound = true;
+        }
       }
 
       pw.println(notebookFound ? "LuckyChef" : "UnluckyChef");

@@ -1,3 +1,5 @@
+package CC.competitions.LTIME70B;
+
 import java.io.PrintWriter;
 import java.util.Scanner;
 

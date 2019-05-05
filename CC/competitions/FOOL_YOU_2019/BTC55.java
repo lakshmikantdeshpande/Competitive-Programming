@@ -1,3 +1,5 @@
+package CC.competitions.FOOL_YOU_2019;
+
 import java.io.PrintWriter;
 import java.util.Scanner;
 
