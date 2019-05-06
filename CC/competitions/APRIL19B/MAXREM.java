@@ -1,4 +1,4 @@
-package com.sbs.communicationcontrol.commonlibrary.model;
+package CC.competitions.APRIL19B;
 
 import java.io.BufferedReader;
 import java.io.IOException;
