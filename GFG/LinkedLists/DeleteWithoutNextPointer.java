@@ -1,3 +1,5 @@
+package GFG.LinkedLists;
+
 import java.util.Scanner;
 
 class Node {
@@ -72,8 +74,6 @@ class Delete_Node {
     }
     return current;
   }
-}
-
 }
 
 /*Please note that it's Function problem i.e.
