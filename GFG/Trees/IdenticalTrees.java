@@ -3,7 +3,7 @@ package GFG.Trees;
 import java.util.HashMap;
 import java.util.Scanner;
 
-class Main {
+class IdenticalTreesInput {
   // driver function to test the above functions
   public static void main(String[] args) {
     // Input the number of test cases you want to run
@@ -88,5 +88,4 @@ class IdenticalTrees {
     return isIdentical(root1.left, root2.left)
         && isIdentical(root1.right, root2.right);
   }
-
 }
