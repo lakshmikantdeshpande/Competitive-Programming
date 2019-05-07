@@ -3,16 +3,6 @@ package GFG.Trees;
 import java.util.Objects;
 import java.util.Scanner;
 
-class Node {
-  int data;
-  Node left, right;
-
-  Node(int d) {
-    data = d;
-    left = right = null;
-  }
-}
-
 class Tree {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
@@ -61,8 +51,8 @@ class Tree {
       //inorder(root1);
       //System.out.println();
       //inorder(root2);
-      GfG g = new GfG();
-      if (g.isIsomorphic(root1, root2)) {
+      IsIsomorphic isIsomorphic = new IsIsomorphic();
+      if (isIsomorphic.isIsomorphic(root1, root2)) {
         System.out.println("Yes");
       } else {
         System.out.println("No");
@@ -98,8 +88,8 @@ class Tree {
   }
 }
 
-class GfG {
-  public boolean isIsomorphic(Node one, Node two) {
+class IsIsomorphic {
+  boolean isIsomorphic(Node one, Node two) {
     if (Objects.isNull(one) && Objects.isNull(two)) {
       return true;
     }
