@@ -1,5 +1,4 @@
-package GFG.AdHoc;
-
+package GFG.BitManipulation;
 
 import java.io.PrintWriter;
 import java.util.Scanner;
