@@ -1,3 +1,4 @@
+package GFG.AdHoc;
 // lakshmikantd on CodeChef, HackerEarth
 // lakshmikantdeshpande on HackerRank, GitHub, GeeksForGeeks
 
