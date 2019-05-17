@@ -11,31 +11,30 @@ public class ArrayRotationJugglingAlgorithm {
 
     int T = scanner.nextInt();
     while (T-- > 0) {
-      int N = scanner.nextInt();
-      int D = scanner.nextInt();
-      int[] array = new int[N];
+      int n = scanner.nextInt();
+      int shift = scanner.nextInt();
+      int[] array = new int[n];
 
-      for (int q = 0; q < N; q++) array[q] = scanner.nextInt();
+      for (int q = 0; q < n; q++) array[q] = scanner.nextInt();
 
-      int i = 0;
-      for (i = 0; i < gcd(N, D); i++) {
+      for (int i = 0; i < gcd(n, shift); i++) {
         int temp = array[i];
-        int j = i;
+        int last = i;
 
         while (true) {
-          int k = (j + D);
-          if (k >= N) {
-            k -= N;
+          int index = (last + shift);
+          if (index >= n) {
+            index -= n;
           }
-          if (k == i) {
+          if (index == i) {
             break;
           }
-          array[j] = array[k];
-          j = k;
+          array[last] = array[index];
+          last = index;
         }
-        array[j] = temp;
+        array[last] = temp;
       }
-      for (int p = 0; p < N; p++) writer.print(array[p] + " ");
+      for (int p = 0; p < n; p++) writer.print(array[p] + " ");
       writer.println();
     }
 
