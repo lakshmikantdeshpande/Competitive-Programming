@@ -1,4 +1,4 @@
-// O(N * (N / MAX)) time 1 space solution
+package hackerrank.legacy_code;// O(N * (N / MAX)) time 1 space solution
 
 import java.io.PrintWriter;
 import java.util.Scanner;
