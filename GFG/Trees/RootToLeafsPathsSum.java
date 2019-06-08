@@ -36,8 +36,6 @@ class RootToLeafsPathsSum {
           }
         }
       }
-//			inorder(root);
-      GfG g = new GfG();
       System.out.println(GfG.treePathsSum(root));
     }
   }
