@@ -1,4 +1,6 @@
-class Solution {
+package CS;
+
+public class CountDistantPairs {
     int countDistantPairs(String inputString, int distance) {
         int count = 0;
         for (int i = 0; i < inputString.length() - distance - 1; i++) {
