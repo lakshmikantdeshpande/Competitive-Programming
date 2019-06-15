@@ -9,19 +9,19 @@ class DFS {
     int t = sc.nextInt();
     while (t-- > 0) {
       ArrayList<ArrayList<Integer>> list = new ArrayList<>();
-      int nov = sc.nextInt();
-      int edg = sc.nextInt();
-      for (int i = 0; i < nov; i++)
-        list.add(i, new ArrayList<Integer>());
+      int vertices = sc.nextInt();
+      int edges = sc.nextInt();
+      for (int i = 0; i < vertices; i++)
+        list.add(i, new ArrayList<>());
 
-      for (int i = 1; i <= edg; i++) {
+      for (int i = 1; i <= edges; i++) {
         int u = sc.nextInt();
         int v = sc.nextInt();
         list.get(u).add(v);
         list.get(v).add(u);
       }
-      boolean[] vis = new boolean[nov];
-      for (int i = 0; i < nov; i++)
+      boolean[] vis = new boolean[vertices];
+      for (int i = 0; i < vertices; i++)
         vis[i] = false;
       Traversal.dfs(0, list, vis);
       System.out.println();
