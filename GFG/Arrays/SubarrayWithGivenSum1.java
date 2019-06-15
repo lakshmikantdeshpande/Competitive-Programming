@@ -1,10 +1,10 @@
-// lakshmikantd
+package GFG.Arrays;// lakshmikantd
 // https://practice.geeksforgeeks.org/problems/subarray-with-given-sum/0
 // N * N time 1 space
 
 import java.util.Scanner;
 
-class Solution {
+public class SubarrayWithGivenSum1 {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     int T = scanner.nextInt();
@@ -21,11 +21,10 @@ class Solution {
 
   private static void printSumSubarray(int[] array, int requiredSum) {
     for (int i = 0; i < array.length; i++) {
-      int start = i;
-      int sum = array[start];
+      int sum = array[i];
       for (int j = i + 1; j <= array.length; j++) {
         if (sum == requiredSum) {
-          System.out.println((start + 1) + " " + (j));
+          System.out.println((i + 1) + " " + (j));
           return;
         }
         if (sum > requiredSum || j == array.length) {

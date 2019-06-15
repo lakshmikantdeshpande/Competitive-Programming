@@ -1,11 +1,11 @@
-// lakshmikantdeshpande
+package GFG.Arrays;// lakshmikantdeshpande
 // https://practice.geeksforgeeks.org/problems/kadanes-algorithm/0
 // N time 1 space
 
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-class Solution {
+class KadanesAlgorithm {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     PrintWriter writer = new PrintWriter(System.out);

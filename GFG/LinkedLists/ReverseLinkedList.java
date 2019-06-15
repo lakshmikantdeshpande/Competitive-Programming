@@ -1,26 +1,18 @@
+package GFG.LinkedLists;
+
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
-class Node {
-  int data;
-  Node next;
-
-  Node(int d) {
-    data = d;
-    next = null;
-  }
-}
-
-public class LinkedList1 {
-  static PrintWriter out;
-  Node head;  // head of lisl
-  Node lastNode;
+public class ReverseLinkedList {
+  private static PrintWriter out;
+  private Node head;  // head of lisl
+  private Node lastNode;
 
   /* Drier program to test above functions */
-  public static void main(String args[]) throws IOException {
+  public static void main(String[] args) throws IOException {
         /* Constructed Linked List is 1->2->3->4->5->6->
          7->8->8->9->null */
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -28,8 +20,8 @@ public class LinkedList1 {
     int t = Integer.parseInt(br.readLine());
     while (t > 0) {
       int n = Integer.parseInt(br.readLine());
-      LinkedList1 llist = new LinkedList1();
-      String nums[] = br.readLine().split(" ");
+      ReverseLinkedList llist = new ReverseLinkedList();
+      String[] nums = br.readLine().split(" ");
       if (n > 0) {
         int a1 = Integer.parseInt(nums[0]);
         Node head = new Node(a1);
@@ -39,7 +31,7 @@ public class LinkedList1 {
         int a = Integer.parseInt(nums[i]);
         llist.addToTheLast(new Node(a));
       }
-      llist.head = new gfg().reverse(llist.head);
+      llist.head = new GFG().reverse(llist.head);
 
       llist.printList();
 
@@ -48,22 +40,18 @@ public class LinkedList1 {
     out.close();
   }
 
-  /* Linked list Node*/
-  /* Utility functions */
-  /* Inserts a new Node at front of the list. */
-  public void addToTheLast(Node node) {
+  private void addToTheLast(Node node) {
     if (head == null) {
       head = node;
       lastNode = node;
     } else {
-      Node temp = head;
       lastNode.next = node;
       lastNode = node;
     }
   }
 
   /* Function to print linked list */
-  void printList() {
+  private void printList() {
     Node temp = head;
     while (temp != null) {
       out.print(temp.data + " ");
@@ -71,32 +59,33 @@ public class LinkedList1 {
     }
     out.println();
   }
-}
 
-class Node {
-  int value;
-  Node next;
+  private static class Node {
+    int data;
+    Node next;
 
-  Node(int value) {
-    this.value = value;
-  }
-}
-
-class gfg {
-  // This function should reverse linked list and return
-  // head of the modified linked list.
-  Node reverse(Node head) {
-    Node prev = null, next = null;
-    Node current = head;
-
-    while (current != null) {
-      next = current.next;
-      current.next = prev;
-      // Move prev and current ahead
-      prev = current;
-      current = next;
+    Node(int value) {
+      this.data = value;
     }
-    head = prev;
-    return head;
+  }
+
+  private static class GFG {
+    // This function should reverse linked list and return
+    // head of the modified linked list.
+    Node reverse(Node head) {
+      Node prev = null, next = null;
+      Node current = head;
+
+      while (current != null) {
+        next = current.next;
+        current.next = prev;
+        // Move prev and current ahead
+        prev = current;
+        current = next;
+      }
+      head = prev;
+      return head;
+    }
   }
 }
+
