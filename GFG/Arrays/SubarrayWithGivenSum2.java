@@ -1,18 +1,18 @@
-// lakshmikantd
+package GFG.Arrays;// lakshmikantd
 // https://www.geeksforgeeks.org/find-subarray-with-given-sum/
 // N time 1 space
 
 import java.util.Scanner;
 
-class Solution {
+public class SubarrayWithGivenSum2 {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
-    int T = scanner.nextInt();
+    int t = scanner.nextInt();
 
-    while (T-- > 0) {
-      int N = scanner.nextInt();
+    while (t-- > 0) {
+      int n = scanner.nextInt();
       int requiredSum = scanner.nextInt();
-      int[] array = getArray(scanner, N);
+      int[] array = getArray(scanner, n);
       printSumSubarray(array, requiredSum);
     }
 
