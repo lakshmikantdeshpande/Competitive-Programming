@@ -19,7 +19,6 @@ public class CountNonLeafNodes {
 
     while (t-- > 0) {
       int n = sc.nextInt();
-      CountNonLeafNodes llist = new CountNonLeafNodes();
       Node root = null;
       HashMap<Integer, Node> m = new HashMap<>();
       for (int i = 0; i < n; i++) {
