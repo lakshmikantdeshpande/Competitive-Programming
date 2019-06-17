@@ -1,6 +1,6 @@
 package LC;// N time N space
 
-class Solution {
+public class AddTwoNumbers {
   public ListNode addTwoNumbers(ListNode first, ListNode second) {
     ListNode head = new ListNode(0);
     ListNode runner = head;
