@@ -12,7 +12,7 @@ class CountCompleteTreeNodes {
         }
     }
 
-    public int countNodes(TreeNode root) {
+    private int countNodes(TreeNode root) {
         if (root == null) {
             return 0;
         }
