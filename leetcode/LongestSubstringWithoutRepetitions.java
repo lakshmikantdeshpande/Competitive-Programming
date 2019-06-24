@@ -18,7 +18,7 @@ public class LongestSubstringWithoutRepetitions {
         set.remove(str.charAt(i++));
       } else {
         set.add(str.charAt(j++));
-        max = Math.max(max, j - i);
+        max = Math.max(max, set.size());
       }
     }
     return max;
