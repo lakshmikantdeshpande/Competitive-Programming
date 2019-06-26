@@ -1,41 +1,40 @@
 package leetcode;
 
 class MergeTwoSortedLists {
-  public ListNode mergeTwoLists(ListNode first, ListNode second) {
-    ListNode head = new ListNode(0);
-    ListNode runner = head;
+    public ListNode mergeTwoLists(ListNode one, ListNode two) {
+        if (one == null || two == null) {
+            return one == null ? two : one;
+        }
 
-    while (first != null && second != null) {
-      if (first.val <= second.val) {
-        runner.next = new ListNode(first.val);
-        first = first.next;
-      } else {
-        runner.next = new ListNode(second.val);
-        second = second.next;
-      }
-      runner = runner.next;
+        ListNode head = new ListNode(0);
+        ListNode prev = head;
+        while (one != null || two != null) {
+            if (one == null) {
+                head.next = new ListNode(two.val);
+                two = two.next;
+            } else if (two == null) {
+                head.next = new ListNode(one.val);
+                one = one.next;
+            } else {
+                if (one.val <= two.val) {
+                    head.next = new ListNode(one.val);
+                    one = one.next;
+                } else {
+                    head.next = new ListNode(two.val);
+                    two = two.next;
+                }
+            }
+            head = head.next;
+        }
+        return prev.next;
     }
 
-    while (first != null) {
-      runner.next = new ListNode(first.val);
-      runner = runner.next;
-      first = first.next;
-    }
+    private static class ListNode {
+        int val;
+        ListNode next;
 
-    while (second != null) {
-      runner.next = new ListNode(second.val);
-      runner = runner.next;
-      second = second.next;
+        ListNode(int x) {
+            val = x;
+        }
     }
-    return head.next;
-  }
-
-  private static class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-      val = x;
-    }
-  }
 }
