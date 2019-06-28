@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.google;
 
 public class NonDecreasingArray {
   private static boolean isNonDecreasing(int[] array) {
