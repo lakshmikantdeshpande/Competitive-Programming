@@ -1,6 +1,9 @@
 package leetcode.google;
 
-class Solution {
+import java.util.Set;
+import java.util.TreeSet;
+
+public class NextClosestTime {
     public String nextClosestTime(String time) {
         String[] tokens = time.split(":");
         int minutes = Integer.parseInt(tokens[0]) * 60;
