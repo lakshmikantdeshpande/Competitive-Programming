@@ -16,6 +16,6 @@ public class FlipEquivalentBinaryTrees {
     private static class TreeNode {
         TreeNode left;
         TreeNode right;
-        TreeNode val;
+        int val;
     }
 }
