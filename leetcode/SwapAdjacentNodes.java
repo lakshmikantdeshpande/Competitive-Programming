@@ -2,11 +2,6 @@ package leetcode;
 
 public class SwapAdjacentNodes {
 
-    private static class ListNode {
-        int data;
-        ListNode next;
-    }
-
     public ListNode swapPairs(ListNode head) {
         if (head == null || head.next == null) return head;
 
@@ -14,5 +9,10 @@ public class SwapAdjacentNodes {
         head.next = swapPairs(next.next);
         next.next = head;
         return next;
+    }
+
+    private static class ListNode {
+        int data;
+        ListNode next;
     }
 }

@@ -26,25 +26,6 @@ public class LongestSubstringWithoutRepetitions {
         return max;
     }
 
-    // fastest
-    public int lengthOfLongestSubstring(String s) {
-        if (s.isEmpty()) return 0;
-        int max = 0;
-        int i = 0;
-        int j = 0;
-        final int n = s.length();
-        Map<Character, Integer> map = new HashMap<>(n);
-        while (j < n) {
-            if (map.containsKey(s.charAt(j))) {
-                i = Math.max(map.get(s.charAt(j)), i);
-            }
-            max = Math.max(max, j - i + 1);
-            map.put(s.charAt(j), j + 1);
-            j++;
-        }
-        return max;
-    }
-
     // Brute force
     private static int lengthOfLongestSubstringBrute(String str) {
         int maxLength = 0;
@@ -75,6 +56,25 @@ public class LongestSubstringWithoutRepetitions {
     public static void main(String[] args) {
         System.out.println(lengthOfLongestSubstringBrute("aaababababaa"));
         System.out.println(lengthOfLongestSubstringOptimal("aaababababaa"));
+    }
+
+    // fastest
+    public int lengthOfLongestSubstring(String s) {
+        if (s.isEmpty()) return 0;
+        int max = 0;
+        int i = 0;
+        int j = 0;
+        final int n = s.length();
+        Map<Character, Integer> map = new HashMap<>(n);
+        while (j < n) {
+            if (map.containsKey(s.charAt(j))) {
+                i = Math.max(map.get(s.charAt(j)), i);
+            }
+            max = Math.max(max, j - i + 1);
+            map.put(s.charAt(j), j + 1);
+            j++;
+        }
+        return max;
     }
 }
 
