@@ -19,8 +19,9 @@ class MyCalendarTwo {
             if (active >= 3) {
                 delta.put(start, delta.get(start) - 1);
                 delta.put(end, delta.get(end) + 1);
-                if (delta.get(start) == 0)
+                if (delta.get(start) == 0) {
                     delta.remove(start);
+                }
                 return false;
             }
         }
