@@ -18,7 +18,6 @@ public class FindAndReplaceInString {
             // if we don't have to replace anything at this index, simply append current character to output
             if (!map.containsKey(i)) {
                 str.append(c);
-                continue;
             } else {
                 String[] replacement = map.get(i);
                 String source = replacement[0];
