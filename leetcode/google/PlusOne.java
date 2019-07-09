@@ -1,22 +1,22 @@
 package leetcode.google;
 
 public class PlusOne {
-
     public int[] plusOne(int[] digits) {
-        int[] answer = new int[digits.length];
-        int[] answerWithCarry = new int[digits.length + 1];
-
+        final int N = digits.length;
+        int[] withCarry = new int[N + 1];
+        int[] withoutCarry = new int[N];
         int carry = 1;
-        for (int i = digits.length - 1; i >= 0; i--) {
-            int temp = digits[i] + carry;
-            answer[i] = answerWithCarry[i + 1] = temp % 10;
-            carry = temp / 10;
+
+        for (int i = N - 1; i >= 0; i--) {
+            int sum = digits[i] + carry;
+            withCarry[i] = withoutCarry[i] = sum % 10;
+            carry = sum / 10;
         }
 
         if (carry == 1) {
-            answerWithCarry[0] = 1;
-            return answerWithCarry;
+            withCarry[0] = carry;
+            return withCarry;
         }
-        return answer;
+        return withoutCarry;
     }
 }
