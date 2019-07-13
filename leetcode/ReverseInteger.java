@@ -1,7 +1,7 @@
-// N time 1 space
+package leetcode;// N time 1 space
 // handled Overflow case
 
-class Reverse_Integer {
+class ReverseInteger {
     public int reverse(int x) {
         long temp = 0;
         while (x != 0) {
