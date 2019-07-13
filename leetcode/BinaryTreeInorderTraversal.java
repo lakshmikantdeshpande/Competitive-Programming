@@ -1,6 +1,8 @@
 package leetcode;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Deque;
 import java.util.List;
 
 public class BinaryTreeInorderTraversal {
@@ -9,6 +11,25 @@ public class BinaryTreeInorderTraversal {
         int val;
         TreeNode left;
         TreeNode right;
+    }
+
+    public List<Integer> inorderTraversalNonRecursive(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        if (root == null) return list;
+
+        Deque<TreeNode> stack = new ArrayDeque<>();
+        TreeNode curr = root;
+        while (curr != null || !stack.isEmpty()) {
+            while (curr != null) {
+                stack.push(curr);
+                curr = curr.left;
+            }
+
+            curr = stack.pop();
+            list.add(curr.val);
+            curr = curr.right;
+        }
+        return list;
     }
 
     public List<Integer> inorderTraversal(TreeNode root) {
