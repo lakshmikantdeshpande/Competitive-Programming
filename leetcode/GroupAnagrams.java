@@ -8,25 +8,22 @@ import java.util.Map;
 
 public class GroupAnagrams {
     public List<List<String>> groupAnagrams(String[] strs) {
-        List<List<String>> anagramList = new ArrayList<>();
-
-        Map<String, List<String>> groupMap = new HashMap<>();
+        Map<String, List<String>> map = new HashMap<>();
         for (String str : strs) {
-            String freqString = buildFreqString(str);
-            List<String> anagrams = groupMap.getOrDefault(freqString, new ArrayList<>());
-            anagrams.add(str);
-            groupMap.put(freqString, anagrams);
+            String hash = hash(str);
+            List<String> list = map.getOrDefault(hash, new ArrayList<>());
+            list.add(str);
+            map.put(hash, list);
         }
 
-        for (List<String> list : groupMap.values()) anagramList.add(list);
-        return anagramList;
+        return new ArrayList<>(map.values());
     }
 
-    private String buildFreqString(String str) {
-        char[] array = new char[26];
+    private String hash(String str) {
+        int[] hashtable = new int[26];
         for (char c : str.toCharArray()) {
-            array[c - 'a']++;
+            hashtable[c - 'a']++;
         }
-        return Arrays.toString(array);
+        return Arrays.toString(hashtable);
     }
 }
