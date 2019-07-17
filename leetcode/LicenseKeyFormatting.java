@@ -1,11 +1,23 @@
 package leetcode;
 
 public class LicenseKeyFormatting {
-    public String licenseKeyFormatting(String str, int k) {
-        StringBuilder builder = new StringBuilder();
-        for (int i = str.length() - 1; i >= 0; i--)
-            if (str.charAt(i) != '-')
-                builder.append(builder.length() % (k + 1) == k ? '-' : "").append(str.charAt(i));
-        return builder.reverse().toString().toUpperCase();
+    public String licenseKeyFormatting(String S, int K) {
+        int count = 0;
+        StringBuilder str = new StringBuilder();
+        int i = S.length() - 1;
+        while (i >= 0) {
+            char c = Character.toUpperCase(S.charAt(i));
+            if (c == '-') {
+                i--;
+            } else if (count != 0 && count % K == 0) {
+                str.append('-');
+                count = 0;
+            } else {
+                str.append(c);
+                count++;
+                i--;
+            }
+        }
+        return str.reverse().toString();
     }
 }
