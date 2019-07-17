@@ -7,7 +7,7 @@ public class SymmetricTree {
         int val;
     }
 
-    public boolean isSymmetric(TreeNode root) {
+    private boolean isSymmetric(TreeNode root) {
         if (root == null) return true;
         return isSymmetric(root.left, root.right);
     }
