@@ -7,7 +7,7 @@ public class MaximumDepthOfBinaryTree {
         int val;
     }
 
-    public int maxDepth(TreeNode root) {
+    private int maxDepth(TreeNode root) {
         if (root == null) {
             return 0;
         }
