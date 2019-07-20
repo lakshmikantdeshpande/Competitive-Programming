@@ -24,26 +24,16 @@ public class BinaryTreeLevelOrderTraversal {
 
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
-        queue.offer(null);
 
         while (!queue.isEmpty()) {
-            TreeNode node = queue.poll();
-            if (node == null) {
-                if (!queue.isEmpty()) {
-                    queue.offer(null);
-                    list.add(new ArrayList<>());
-                }
-            } else {
-                if (list.isEmpty()) {
-                    list.add(new ArrayList<>());
-                }
+            final int size = queue.size();
+            list.add(new ArrayList<>());
+
+            for (int i = 0; i < size; i++) {
+                TreeNode node = queue.poll();
                 list.get(list.size() - 1).add(node.val);
-                if (node.left != null) {
-                    queue.offer(node.left);
-                }
-                if (node.right != null) {
-                    queue.offer(node.right);
-                }
+                if (node.left != null) queue.offer(node.left);
+                if (node.right != null) queue.offer(node.right);
             }
         }
         return list;
