@@ -1,4 +1,4 @@
-// N time N space
+package leetcode;// N time N space
 // N + N time N space
 // N * N time 1 space
 
@@ -6,9 +6,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-class TwoSum {
+public class TwoSum {
     public static void main(String[] args) {
-        Two_Sum ts = new Two_Sum();
+        TwoSum ts = new TwoSum();
         int[] array = new int[]{2, 7, 11, 15};
         System.out.println(Arrays.toString(ts.twoSum(array, 9)));
         System.out.println(Arrays.toString(ts.twoSum1(array, 9)));
