@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-class Two_Sum {
+class TwoSum {
     public static void main(String[] args) {
         Two_Sum ts = new Two_Sum();
         int[] array = new int[]{2, 7, 11, 15};

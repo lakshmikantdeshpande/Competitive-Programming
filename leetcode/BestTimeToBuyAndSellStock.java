@@ -1,6 +1,6 @@
 package leetcode;
 
-public class Best_Time_to_Buy_and_Sell_Stock {
+public class BestTimeToBuyAndSellStock {
 
     public static void main(String[] args) {
         System.out.println(maxProfit(new int[]{7, 1, 5, 3, 6, 4}));

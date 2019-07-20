@@ -1,5 +1,5 @@
 // N time 1 Space
-class Judge_Route_Circle {
+class JudgeRouteCircle {
     public boolean judgeCircle(String moves) {
         int upDown = 0, leftRight = 0;
         for (char c : moves.toCharArray()) {
