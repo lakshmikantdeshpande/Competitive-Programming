@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FindTheDifference {
-    public char findTheDifference(String s, String t) {
+    private char findTheDifference(String s, String t) {
         Map<Character, Integer> map = new HashMap<>();
         for (char c : s.toCharArray()) {
             map.put(c, map.getOrDefault(c, 0) + 1);
@@ -18,5 +18,17 @@ public class FindTheDifference {
         }
 
         return '!';
+    }
+
+    private char findTheDifferenceXOR(String s, String t) {
+        int missing = 0;
+        for (char c : s.toCharArray()) {
+            missing ^= c;
+        }
+
+        for (char c : t.toCharArray()) {
+            missing ^= c;
+        }
+        return (char) missing;
     }
 }
