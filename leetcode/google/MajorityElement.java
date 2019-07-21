@@ -1,10 +1,11 @@
 package leetcode.google;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
 public class MajorityElement {
-    public int majorityElement(int[] nums) {
+    private int majorityElement(int[] nums) {
         int maxCount = nums.length / 2;
 
         Map<Integer, Integer> map = new HashMap<>();
@@ -14,5 +15,10 @@ public class MajorityElement {
             if (count > maxCount) return num;
         }
         return -1;
+    }
+
+    private int majorityElementSort(int[] nums) {
+        Arrays.sort(nums);
+        return nums[nums.length / 2];
     }
 }
