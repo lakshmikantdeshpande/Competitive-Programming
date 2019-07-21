@@ -1,11 +1,6 @@
 package leetcode;
 
 public class SymmetricTree {
-    private static class TreeNode {
-        TreeNode left;
-        TreeNode right;
-        int val;
-    }
 
     private boolean isSymmetric(TreeNode root) {
         if (root == null) return true;

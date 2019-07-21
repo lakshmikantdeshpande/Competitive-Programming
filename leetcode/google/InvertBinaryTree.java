@@ -1,18 +1,10 @@
 package leetcode.google;
 
+import leetcode.TreeNode;
+
 public class InvertBinaryTree {
 
-    class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int data) {
-            val = data;
-        }
-    }
-
-    public TreeNode invertTree(TreeNode root) {
+    private TreeNode invertTree(TreeNode root) {
         if (root == null) return root;
 
         TreeNode left = invertTree(root.left);

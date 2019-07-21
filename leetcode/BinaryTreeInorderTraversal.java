@@ -7,12 +7,6 @@ import java.util.List;
 
 public class BinaryTreeInorderTraversal {
 
-    private static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-    }
-
     public List<Integer> inorderTraversalNonRecursive(TreeNode root) {
         List<Integer> list = new ArrayList<>();
         if (root == null) return list;

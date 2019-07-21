@@ -2,11 +2,6 @@ package leetcode;
 
 public class ValidateBinarySearchTree {
 
-    private static class TreeNode {
-        TreeNode left, right;
-        int val;
-    }
-
     public boolean isValidBST(TreeNode root) {
         return isBST(root, null, null);
     }

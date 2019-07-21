@@ -9,14 +9,4 @@ class CountCompleteTreeNodes {
 
         return 1 + countNodes(root.left) + countNodes(root.right);
     }
-
-    private static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int data) {
-            this.val = data;
-        }
-    }
 }

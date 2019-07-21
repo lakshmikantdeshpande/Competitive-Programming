@@ -1,11 +1,8 @@
 package leetcode.google;
 
+import leetcode.TreeNode;
+
 public class MaximumDepthOfBinaryTree {
-    private static class TreeNode {
-        TreeNode left;
-        TreeNode right;
-        int val;
-    }
 
     private int maxDepth(TreeNode root) {
         if (root == null) {

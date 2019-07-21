@@ -16,14 +16,4 @@ public class MergeTwoBinaryTrees {
         // Return this new node
         return node;
     }
-
-    private static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 }

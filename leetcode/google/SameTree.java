@@ -1,12 +1,8 @@
 package leetcode.google;
 
-public class SameTree {
+import leetcode.TreeNode;
 
-    private static class TreeNode {
-        TreeNode left;
-        TreeNode right;
-        int val;
-    }
+public class SameTree {
 
     private boolean isSameTree(TreeNode p, TreeNode q) {
         if (p == null && q == null) return true;
