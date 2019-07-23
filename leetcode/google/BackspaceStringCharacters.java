@@ -1,5 +1,8 @@
 package leetcode.google;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 public class BackspaceStringCharacters {
     public boolean backspaceCompare(String S, String T) {
         int i = S.length() - 1, j = T.length() - 1;
@@ -34,5 +37,23 @@ public class BackspaceStringCharacters {
             j--;
         }
         return true;
+    }
+
+    private boolean backspaceCompareStack(String S, String T) {
+        return compileString(S).equals(compileString(T));
+    }
+
+    private String compileString(String input) {
+        Deque<Character> stack = new ArrayDeque<>();
+        int i = 0;
+        while (i < input.length()) {
+            char c = input.charAt(i++);
+            if (c == '#') {
+                if (!stack.isEmpty()) stack.pop();
+            } else {
+                stack.push(c);
+            }
+        }
+        return stack.toString();
     }
 }
