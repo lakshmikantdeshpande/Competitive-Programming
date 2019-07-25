@@ -5,8 +5,8 @@ import java.util.Deque;
 
 class MinStack {
 
-  Deque<Integer> stack;
-  Deque<Integer> aux;
+  private Deque<Integer> stack;
+  private Deque<Integer> aux;
 
   /**
    * initialize your data structure here.
@@ -31,10 +31,10 @@ class MinStack {
   }
 
   public int top() {
-    return stack.peek();
+    return stack.isEmpty() ? -1 : stack.peek();
   }
 
   public int getMin() {
-    return aux.peek();
+    return aux.isEmpty() ? -1 : aux.peek();
   }
 }
