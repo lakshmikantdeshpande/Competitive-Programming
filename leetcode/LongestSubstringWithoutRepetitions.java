@@ -58,7 +58,6 @@ public class LongestSubstringWithoutRepetitions {
         System.out.println(lengthOfLongestSubstringOptimal("aaababababaa"));
     }
 
-    // fastest
     public int lengthOfLongestSubstring(String s) {
         if (s.isEmpty()) return 0;
         int max = 0;
@@ -73,6 +72,22 @@ public class LongestSubstringWithoutRepetitions {
             max = Math.max(max, j - i + 1);
             map.put(s.charAt(j), j + 1);
             j++;
+        }
+        return max;
+    }
+
+    // fastest
+    private int lengthOfLongestSubstringFastest(String s) {
+        final int n = s.length();
+        int i = 0;
+        int max = 0;
+        int[] indexes = new int[128];
+
+        for (int j = 0; j < n; j++) {
+            char c = s.charAt(j);
+            i = Math.max(indexes[c], i);
+            max = Math.max(max, j - i + 1);
+            indexes[c] = j + 1;
         }
         return max;
     }
