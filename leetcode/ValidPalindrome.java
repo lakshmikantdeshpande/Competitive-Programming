@@ -10,9 +10,9 @@ class ValidPalindrome {
         if (i < j) {
             char a = Character.toLowerCase(s.charAt(i));
             char b = Character.toLowerCase(s.charAt(j));
-            if (!isAlphaNum(a)) {
+            if (isSpecialChar(a)) {
                 return isPalindromeRecursive(s, i + 1, j);
-            } else if (!isAlphaNum(b)) {
+            } else if (isSpecialChar(b)) {
                 return isPalindromeRecursive(s, i, j - 1);
             } else {
                 if (a == b) {
@@ -29,9 +29,9 @@ class ValidPalindrome {
         while (i < j) {
             char a = Character.toLowerCase(s.charAt(i));
             char b = Character.toLowerCase(s.charAt(j));
-            if (!isAlphaNum(a)) {
+            if (isSpecialChar(a)) {
                 i++;
-            } else if (!isAlphaNum(b)) {
+            } else if (isSpecialChar(b)) {
                 j--;
             } else {
                 if (a == b) {
@@ -45,7 +45,7 @@ class ValidPalindrome {
         return true;
     }
 
-    private boolean isAlphaNum(char c) {
-        return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9');
+    private boolean isSpecialChar(char c) {
+        return (c < 'a' || c > 'z') && (c < 'A' || c > 'Z') && (c < '0' || c > '9');
     }
 }
