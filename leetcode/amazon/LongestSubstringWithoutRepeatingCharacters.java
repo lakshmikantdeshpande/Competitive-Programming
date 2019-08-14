@@ -1,6 +1,8 @@
 package leetcode.amazon;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 public class LongestSubstringWithoutRepeatingCharacters {
@@ -56,4 +58,21 @@ public class LongestSubstringWithoutRepeatingCharacters {
         return len;
     }
 
+    public int lengthOfLongestSubstring(String s) {
+        final int n = s.length();
+        int i = 0;
+        int len = 0;
+        Map<Character, Integer> map = new HashMap<>();
+
+        for (int j = 0; j < n; j++) {
+            char c = s.charAt(j);
+            if (map.containsKey(c)) {
+                i = Math.max(map.get(c), i);
+            }
+
+            len = Math.max(len, j - i + 1);
+            map.put(c, j + 1);
+        }
+        return len;
+    }
 }
