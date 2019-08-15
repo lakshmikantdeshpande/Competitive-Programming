@@ -1,4 +1,4 @@
-package LinkedLists;
+package geeksforgeeks.linked_lists;
 
 public class ReverseLinkedListInKSizeGroups {
 
