@@ -1,7 +1,5 @@
 package practice;
 
-import leetcode.TreeNode;
-
 public class SortedArrayToBST {
 
     public TreeNode sortedArrayToBST(int[] nums) {

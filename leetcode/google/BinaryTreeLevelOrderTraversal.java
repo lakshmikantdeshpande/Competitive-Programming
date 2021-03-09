@@ -1,6 +1,6 @@
 package leetcode.google;
 
-import leetcode.TreeNode;
+import practice.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
