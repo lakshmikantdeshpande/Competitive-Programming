@@ -1,3 +1,7 @@
+package leetcode.amazon;
+
+import java.util.Stack;
+
 public class LargestAreaUnderHistogram {
     public int largestRectangleArea(int[] heights) {
         if (heights == null || heights.length == 0) {
