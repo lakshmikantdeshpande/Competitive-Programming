@@ -26,7 +26,7 @@ public class NextClosestTime {
 
     private boolean isNextClosest(String time, Set<Integer> digits) {
         for (char num : time.toCharArray()) {
-            if (num >= '0' || num <= '9') {
+            if (num >= '0' && num <= '9') {
                 int number = Character.getNumericValue(num);
                 if (!digits.contains(number)) {
                     return false;
@@ -39,7 +39,7 @@ public class NextClosestTime {
     private Set<Integer> buildUniqueDigitSet(String time) {
         Set<Integer> digits = new HashSet<>();
         for (char num : time.toCharArray()) {
-            if (num >= '0' || num <= '9') {
+            if (num >= '0' && num <= '9') {
                 digits.add(Character.getNumericValue(num));
             }
         }
