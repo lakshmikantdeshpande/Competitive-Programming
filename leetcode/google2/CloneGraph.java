@@ -1,9 +1,6 @@
 package leetcode.google2;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class CloneGraph {
     Map<Node, Node> visited = new HashMap<>();
@@ -13,17 +10,25 @@ public class CloneGraph {
             return node;
         }
 
-        if (visited.containsKey(node)) {
-            return visited.get(node);
-        }
+        Map<Node, Node> visited = new HashMap<>();
+        visited.put(node, new Node(node.val, new ArrayList<>()));
 
-        Node newNode = new Node(node.val, new ArrayList<>());
-        visited.put(node, newNode);
+        Queue<Node> queue = new LinkedList<>();
+        queue.offer(node);
 
-        for (Node curr : node.neighbors) {
-            newNode.neighbors.add(cloneGraph(curr));
+        while (!queue.isEmpty()) {
+            Node curr = queue.poll();
+            if (curr != null) {
+                for (Node neighbor : curr.neighbors) {
+                    if (!visited.containsKey(neighbor)) {
+                        visited.put(neighbor, new Node(neighbor.val, new ArrayList<>()));
+                        queue.offer(neighbor);
+                    }
+                    visited.get(curr).neighbors.add(visited.get(neighbor));
+                }
+            }
         }
-        return newNode;
+        return visited.get(node);
     }
 
     private static final class Node {
