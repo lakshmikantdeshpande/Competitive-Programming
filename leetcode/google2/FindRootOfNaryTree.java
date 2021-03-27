@@ -1,6 +1,11 @@
 package leetcode.google2;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class FindRootOfNaryTree {
 
@@ -38,7 +43,7 @@ public class FindRootOfNaryTree {
             children = new ArrayList<Node>();
         }
 
-        public Node(int _val,ArrayList<Node> _children) {
+        public Node(int _val, ArrayList<Node> _children) {
             val = _val;
             children = _children;
         }
