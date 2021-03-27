@@ -9,6 +9,42 @@ import java.util.Set;
 
 public class FindRootOfNaryTree {
 
+    public Node findRootO1XOR(List<Node> tree) {
+        long sum = 0L;
+        for (Node node : tree) {
+            sum ^= node.val;
+
+            for (Node child : node.children) {
+                sum ^= child.val;
+            }
+        }
+
+        for (Node node : tree) {
+            if (node.val == sum) {
+                return node;
+            }
+        }
+        return null;
+    }
+
+    public Node findRootO1Sum(List<Node> tree) {
+        long sum = 0L;
+        for (Node node : tree) {
+            sum += node.val;
+
+            for (Node child : node.children) {
+                sum -= child.val;
+            }
+        }
+
+        for (Node node : tree) {
+            if (node.val == sum) {
+                return node;
+            }
+        }
+        return null;
+    }
+
     public Node findRoot(List<Node> tree) {
         Map<Node, Set<Node>> map = new HashMap<>(tree.size());
         Node last = null;
@@ -35,12 +71,12 @@ public class FindRootOfNaryTree {
 
 
         public Node() {
-            children = new ArrayList<Node>();
+            children = new ArrayList<>();
         }
 
         public Node(int _val) {
             val = _val;
-            children = new ArrayList<Node>();
+            children = new ArrayList<>();
         }
 
         public Node(int _val, ArrayList<Node> _children) {
