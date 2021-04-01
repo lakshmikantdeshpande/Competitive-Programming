@@ -1,7 +1,10 @@
 package leetcode.google2;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class NumberOfProvinces {
-    public int findCircleNum(int[][] isConnected) {
+    public int findCircleNumDFS(int[][] isConnected) {
         int[] visited = new int[isConnected.length];
         int count = 0;
 
@@ -21,5 +24,29 @@ public class NumberOfProvinces {
                 dfs(j, isConnected, visited);
             }
         }
+    }
+
+    public int findCircleNumBFS(int[][] isConnected) {
+        int[] visited = new int[isConnected.length];
+        int count = 0;
+
+        Queue<Integer> queue = new LinkedList<>();
+
+        for (int i = 0; i < isConnected.length; i++) {
+            if (visited[i] == 0) {
+                queue.offer(i);
+                while (!queue.isEmpty()) {
+                    int num = queue.poll();
+                    visited[num] = 1;
+                    for (int j = 0; j < isConnected.length; j++) {
+                        if (isConnected[num][j] == 1 && visited[j] == 0) {
+                            queue.offer(j);
+                        }
+                    }
+                }
+                count++;
+            }
+        }
+        return count;
     }
 }
