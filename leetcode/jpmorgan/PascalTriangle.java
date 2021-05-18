@@ -1,13 +1,13 @@
 package leetcode.jpmorgan;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class PascalTriangle {
     public List<List<Integer>> generate(int numRows) {
         if (numRows == 1) {
-            return Arrays.asList(Arrays.asList(1));
+            return Collections.singletonList(Collections.singletonList(1));
         }
         List<List<Integer>> result = new ArrayList<>();
         result.add(new ArrayList<>());
