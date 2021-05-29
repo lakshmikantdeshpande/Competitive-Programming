@@ -1,11 +1,12 @@
 package leetcode.goldman;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.LinkedList;
 
 public class MergeIntervals {
     public int[][] merge(int[][] intervals) {
-        Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
+        Arrays.sort(intervals, Comparator.comparingInt(a -> a[0]));
         LinkedList<int[]> merged = new LinkedList<>();
 
         for (int[] interval : intervals) {
